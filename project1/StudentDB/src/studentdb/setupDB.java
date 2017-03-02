@@ -12,7 +12,27 @@ import java.sql.*;
  */
 public class setupDB {
     
-    
-    
-    
+    public static void main (String [] args)
+    {
+        Connection c = null; 
+        
+        try
+        {
+            Class.forName("org.sqlite.JDBC");
+            c = DriverManager.getConnection("jdbc:sqlite:test.db");
+            
+            //select stuff from database 
+            
+            
+        }
+        catch(Exception e)
+        {
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+            System.exit(0);
+            
+        }
+        System.out.println("opened database");
+        
+        
+    }
 }

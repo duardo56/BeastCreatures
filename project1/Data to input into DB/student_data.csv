@@ -1,26 +1,26 @@
-Student id,first_name,last_name,password,email,gender,date of birth,Street address,city,state
-walkerha1,Harry,Walker,student1,hwalker0@usda.gov,Male,8/18/2016,75838 Susan Street,Rochester,New York
-ruizbe1,Benjamin,Ruiz,student2,bruiz1@weather.com,Male,9/27/2016,3 Erie Center,Longview,Texas
-spencerla1,Laura,Spencer,student3,lspencer2@sun.com,Female,3/4/2017,54350 Iowa Way,Cedar Rapids,Iowa
-stewartra1,Raymond,Stewart,student4,rstewart3@virginia.edu,Male,2/8/2017,22 Kensington Hill,Los Angeles,California
-rossla1,Laura,Ross,student5,lross4@google.it,Female,9/12/2016,3 Harper Parkway,Des Moines,Iowa
-bellcy1,Cynthia,Bell,student6,cbell5@theguardian.com,Female,7/23/2016,3351 Stoughton Circle,Lees Summit,Missouri
-jenkinsch1,Christine,Jenkins,student7,cjenkins6@woothemes.com,Female,8/14/2016,6 Anthes Circle,Hampton,Virginia
-hudsonca1,Catherine,Hudson,student8,chudson7@intel.com,Female,11/20/2016,78706 Declaration Point,Atlanta,Georgia
-fowlerju1,Judy,Fowler,student9,jfowler8@miitbeian.gov.cn,Female,1/26/2017,25028 American Ash Center,Englewood,Colorado
-robertsonja1,Janice,Robertson,student10,jrobertson9@arizona.edu,Female,5/29/2016,13 Gina Plaza,San Antonio,Texas
-garrettma1,Maria,Garrett,student11,mgarretta@smh.com.au,Female,9/16/2016,33 Helena Drive,Boston,Massachusetts
-andrewska1,Katherine,Andrews,student12,kandrewsb@senate.gov,Female,2/21/2017,36 Spaight Pass,Tampa,Florida
-mooreph1,Phyllis,Moore,student13,pmoorec@msn.com,Female,7/23/2016,9 Florence Court,Denver,Colorado
-austinal1,Albert,Austin,student14,aaustind@github.io,Male,3/5/2017,7827 Lerdahl Court,Sacramento,California
-stephenseu1,Eugene,Stephens,student15,estephense@va.gov,Male,7/7/2016,1 Londonderry Parkway,Milwaukee,Wisconsin
-montgomeryad1,Adam,Montgomery,student16,amontgomeryf@census.gov,Male,10/14/2016,716 Transport Court,Dearborn,Michigan
-bishopki1,Kimberly,Bishop,student17,kbishopg@va.gov,Female,1/28/2017,577 Wayridge Lane,Buffalo,New York
-pattersonka1,Kathleen,Patterson,student18,kpattersonh@google.ru,Female,8/12/2016,1504 Vahlen Alley,Washington,District of Columbia
-dunnro1,Ronald,Dunn,student19,rdunni@typepad.com,Male,1/16/2017,6 New Castle Crossing,Erie,Pennsylvania
-cooperer1,Eric,Cooper,student20,ecooperj@alibaba.com,Male,7/8/2016,0575 Cardinal Hill,Louisville,Kentucky
-crawfordbr1,Brian,Crawford,student21,bcrawfordk@examiner.com,Male,7/4/2016,163 Rusk Road,Columbus,Ohio
-millsjo1,Jose,Mills,student22,jmillsl@tripadvisor.com,Male,2/17/2017,17 Prentice Place,Aurora,Colorado
-vasquezcl1,Clarence,Vasquez,student23,cvasquezm@google.ru,Male,12/13/2016,059 Bartillon Court,Harrisburg,Pennsylvania
-butlerlo1,Louis,Butler,student24,lbutlern@blinklist.com,Male,3/27/2016,215 Tony Hill,Wilmington,Delaware
-millsfr1,Fred,Mills,student25,fmillso@google.co.uk,Male,3/21/2016,3234 Kinsman Court,Apache Junction,Arizona
+Student id,first_name,last_name,password,email,gender,date of birth,Street address,city,state,,
+walkerha1,Harry,Walker,student1,hwalker0@usda.gov,Male,8/18/2016,75838 Susan Street,Rochester,New York,,
+ruizbe1,Benjamin,Ruiz,student2,bruiz1@weather.com,Male,9/27/2016,3 Erie Center,Longview,Texas,,
+spencerla1,Laura,Spencer,student3,lspencer2@sun.com,Female,3/4/2017,54350 Iowa Way,Cedar Rapids,Iowa,,
+stewartra1,Raymond,Stewart,student4,rstewart3@virginia.edu,Male,2/8/2017,22 Kensington Hill,Los Angeles,California,,15
+rossla1,Laura,Ross,student5,lross4@google.it,Female,9/12/2016,3 Harper Parkway,Des Moines,Iowa,,2
+bellcy1,Cynthia,Bell,student6,cbell5@theguardian.com,Female,7/23/2016,3351 Stoughton Circle,Lees Summit,Missouri,,
+jenkinsch1,Christine,Jenkins,student7,cjenkins6@woothemes.com,Female,8/14/2016,6 Anthes Circle,Hampton,Virginia,,9
+hudsonca1,Catherine,Hudson,student8,chudson7@intel.com,Female,11/20/2016,78706 Declaration Point,Atlanta,Georgia,,8
+fowlerju1,Judy,Fowler,student9,jfowler8@miitbeian.gov.cn,Female,1/26/2017,25028 American Ash Center,Englewood,Colorado,,7
+robertsonja1,Janice,Robertson,student10,jrobertson9@arizona.edu,Female,5/29/2016,13 Gina Plaza,San Antonio,Texas,,12
+garrettma1,Maria,Garrett,student11,mgarretta@smh.com.au,Female,9/16/2016,33 Helena Drive,Boston,Massachusetts,,15
+andrewska1,Katherine,Andrews,student12,kandrewsb@senate.gov,Female,2/21/2017,36 Spaight Pass,Tampa,Florida,,10
+mooreph1,Phyllis,Moore,student13,pmoorec@msn.com,Female,7/23/2016,9 Florence Court,Denver,Colorado,,12
+austinal1,Albert,Austin,student14,aaustind@github.io,Male,3/5/2017,7827 Lerdahl Court,Sacramento,California,,1
+stephenseu1,Eugene,Stephens,student15,estephense@va.gov,Male,7/7/2016,1 Londonderry Parkway,Milwaukee,Wisconsin,,19
+montgomeryad1,Adam,Montgomery,student16,amontgomeryf@census.gov,Male,10/14/2016,716 Transport Court,Dearborn,Michigan,,18
+bishopki1,Kimberly,Bishop,student17,kbishopg@va.gov,Female,1/28/2017,577 Wayridge Lane,Buffalo,New York,,7
+pattersonka1,Kathleen,Patterson,student18,kpattersonh@google.ru,Female,8/12/2016,1504 Vahlen Alley,Washington,District of Columbia,,17
+dunnro1,Ronald,Dunn,student19,rdunni@typepad.com,Male,1/16/2017,6 New Castle Crossing,Erie,Pennsylvania,,15
+cooperer1,Eric,Cooper,student20,ecooperj@alibaba.com,Male,7/8/2016,0575 Cardinal Hill,Louisville,Kentucky,,2
+crawfordbr1,Brian,Crawford,student21,bcrawfordk@examiner.com,Male,7/4/2016,163 Rusk Road,Columbus,Ohio,,4
+millsjo1,Jose,Mills,student22,jmillsl@tripadvisor.com,Male,2/17/2017,17 Prentice Place,Aurora,Colorado,,8
+vasquezcl1,Clarence,Vasquez,student23,cvasquezm@google.ru,Male,12/13/2016,059 Bartillon Court,Harrisburg,Pennsylvania,,13
+butlerlo1,Louis,Butler,student24,lbutlern@blinklist.com,Male,3/27/2016,215 Tony Hill,Wilmington,Delaware,,17
+millsfr1,Fred,Mills,student25,fmillso@google.co.uk,Male,3/21/2016,3234 Kinsman Court,Apache Junction,Arizona,,14

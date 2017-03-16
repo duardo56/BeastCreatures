@@ -1,20 +1,20 @@
-Course_id,Course_name,Taught_by,,,
-acc3110,Accounting,Rice,,,1
-acc3111,Accounting,Harden,,,2
-chem2211,Organic Chemistry,Carr,,,3
-cs1201,Computer Architecture,Kelley,,,4
-cs2410,Digital Logic,Gray,,,5
-cs2411,Digital Logic,Jenkins,,,6
-cs3300,Object Oriented Programming,Ali,,,7
-cs3306,Theory of Computation,Xavier,,,8
-cs3322,Artificial Intellegence,Sims,,,9
-cs3404,Software Engineering,Hudson,,,10
-cs4302,Programming Language Concepts,Uzamaki,,,11
-cs4303,Operating Ssytems,Xavier,,,12
-cs4301,Operating Sytems,Bowman,,,13
-eco2402,Macro Economics,Parker,,,14
-eco2403,Macro Economics,Bradley,,,15
-eng1011,English 101,Torres,,,16
-eng1301,English Composition,Parker,,,17
-math2405,Discrete Math,Kent,,,18
-math2407,Linear Algebra,Wayne,,,19
+Course_id,Course_name,Taught_by
+acc3110,Accounting,Rice
+acc3111,Accounting,Harden
+chem2211,Organic Chemistry,Carr
+cs1201,Computer Architecture,Kelley
+cs2410,Digital Logic,Gray
+cs2411,Digital Logic,Jenkins
+cs3300,Object Oriented Programming,Ali
+cs3306,Theory of Computation,Xavier
+cs3322,Artificial Intellegence,Sims
+cs3404,Software Engineering,Hudson
+cs4302,Programming Language Concepts,Uzamaki
+cs4303,Operating Ssytems,Xavier
+cs4301,Operating Sytems,Bowman
+eco2402,Macro Economics,Parker
+eco2403,Macro Economics,Bradley
+eng1011,English 101,Torres
+eng1301,English Composition,Parker
+math2405,Discrete Math,Kent
+math2407,Linear Algebra,Wayne

@@ -114,8 +114,9 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void Ok_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ok_buttonActionPerformed
                 // TODO add your handling code here:
-                //verify JDBC connection
-                //pass in sql statement
+            
+                //stuff to do when ok button is clicked 
+                
                 
                 
     }//GEN-LAST:event_Ok_buttonActionPerformed

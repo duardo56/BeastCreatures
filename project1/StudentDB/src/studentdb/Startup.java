@@ -20,10 +20,13 @@ public class Startup {
     public static void main(String[] args) {
         // TODO code application logic here
         //create the object for the main menu here 
-        LogInField menu = new LogInField(); // object for main menu
-        menu.setVisible(true); //this is for the gui to display on the screen
+//        LogInField menu = new LogInField(); // object for main menu
+//        menu.setVisible(true); //this is for the gui to display on the screen
        
-       setupDB db = new setupDB(); 
+        FirstLogin log = new FirstLogin();
+        log.setVisible(true);
+
+       setupDB db = new setupDB(); //sets up the database connection
        
        
     }

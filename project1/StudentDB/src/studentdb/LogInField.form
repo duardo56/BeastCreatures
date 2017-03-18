@@ -116,7 +116,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/ImgResource/Database-Download-PNG.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Student Database"/>
+        <Property name="text" type="java.lang.String" value="Login"/>
       </Properties>
     </Component>
   </SubComponents>

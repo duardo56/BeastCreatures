@@ -9,12 +9,12 @@ package studentdb;
  *
  * @author heavy_linux_guy
  */
-public class MainMenu extends javax.swing.JFrame {
+public class LogInField extends javax.swing.JFrame {
 
     /**
      * Creates new form MainMenu
      */
-    public MainMenu() {
+    public LogInField() {
         initComponents();
     }
 
@@ -63,7 +63,7 @@ public class MainMenu extends javax.swing.JFrame {
         });
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImgResource/Database-Download-PNG.png"))); // NOI18N
-        jLabel1.setText("Student Database");
+        jLabel1.setText("Login");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -114,8 +114,9 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void Ok_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ok_buttonActionPerformed
                 // TODO add your handling code here:
-                //verify JDBC connection
-                //pass in sql statement
+            
+                //stuff to do when ok button is clicked 
+                
                 
                 
     }//GEN-LAST:event_Ok_buttonActionPerformed
@@ -146,20 +147,21 @@ public class MainMenu extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LogInField.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LogInField.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LogInField.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LogInField.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainMenu().setVisible(true);
+                new LogInField().setVisible(true);
             }
         });
     }

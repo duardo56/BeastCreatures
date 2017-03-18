@@ -9,7 +9,7 @@ package studentdb;
  *
  * @author heavy_linux_guy
  */
-public class StudentDB {
+public class Startup {
 
     /**
      * @param args the command line arguments
@@ -19,10 +19,17 @@ public class StudentDB {
     public static void main(String[] args) {
         // TODO code application logic here
         //create the object for the main menu here 
-        MainMenu menu = new MainMenu(); // object for main menu
-        menu.setVisible(true); //this is for the gui to display on the screen
+//        LogInField menu = new LogInField(); // object for main menu
+//        menu.setVisible(true); //this is for the gui to display on the screen
        
+<<<<<<< HEAD:project1/StudentDB/src/studentdb/StudentDB.java
       setupDB db = new setupDB(); //initalize the database 
+=======
+        FirstLogin log = new FirstLogin();
+        log.setVisible(true);
+
+       setupDB db = new setupDB(); //sets up the database connection
+>>>>>>> upd:project1/StudentDB/src/studentdb/Startup.java
        
        
     }

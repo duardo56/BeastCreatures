@@ -1,0 +1,21 @@
+Faculty id,Password,first_name,last_name,email,gender,Courses Taught ,Course ID 
+torressa1,teacher1,Sara,Torres,storres0@csmonitor.com,Female,English 101,eng1011
+carrpa1,teacher2,Pamela,Carr,pcarr1@cargocollective.com,Female,Organic Chemistry,chem2211
+kelleyam1,teacher3,Amy,Kelley,akelley2@studiopress.com,Female,Computer Architecture,cs1201
+jenkinsel1,teacher4,Elizabeth,Jenkins,ejenkins3@google.ca,Female,Digital Logic,cs2401
+bowmanaa1,teacher5,Aaron,Bowman,abowman4@slate.com,Male,Operating Systems,cs4303
+bradleyad1,teacher6,Adam,Bradley,abradley5@disqus.com,Male,Macro Economics,eco2402
+ricema1,teacher7,Mark,Rice,mrice6@slate.com,Male,Accounting,acc3110
+hudsongl1,teacher8,Gloria,Hudson,ghudson7@hatena.ne.jp,Female,Software Engineering,cs3404
+jenkinsdo1,teacher9,Dorothy,Jenkins,djenkins8@time.com,Female,Robotics,cs4305
+simska1,teacher10,Kathleen,Sims,ksims9@cnbc.com,Female,Artificial Intelligence,cs3322
+parkerp2,teacher11,Peter,Parker,pparker@google.com.au,Male,English Composition,
+waynep2,teacher12,Bruce,Wayne,bwayne7@yandex.ru,Male,Linear Algebra,
+kentp2,teacher13,Clark,Kent,kclark12@free.fr,Male,Discrete Math,
+grayp2,teacher14,Jean ,Gray,jgray8@jailbum.net,Male,Digital Logic,
+xavierp2,teacher15,Charles,Xavier,xcharly19@ihg.com,Male,Operating Systems,
+uzamakip2,teacher16,Nauroto,Uzamaki,unauroto20@umich.edu,Male,Programming Language concepts,
+hardenp2,teacher17,James,Harden,jharden@rambler.ru,Male,Accounting,
+alip2,teacher18,Mohammad,Ali,amohamm@jailbum.net,Male,Object Oriented Programming ,
+parkerp2,teacher19,Peter,Parker,pparker@google.com.au,Male,Macro Economics,
+xavierp2,teacher20,Charles,Xavier,xcharly19@ihg.com,Male,Theory of Computation,

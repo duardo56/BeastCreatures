@@ -22,14 +22,11 @@ public class Startup {
 //        LogInField menu = new LogInField(); // object for main menu
 //        menu.setVisible(true); //this is for the gui to display on the screen
        
-<<<<<<< HEAD:project1/StudentDB/src/studentdb/StudentDB.java
-      setupDB db = new setupDB(); //initalize the database 
-=======
+    //  setupDB db = new setupDB(); //initalize the database 
+
         FirstLogin log = new FirstLogin();
         log.setVisible(true);
 
-       setupDB db = new setupDB(); //sets up the database connection
->>>>>>> upd:project1/StudentDB/src/studentdb/Startup.java
        
        
     }

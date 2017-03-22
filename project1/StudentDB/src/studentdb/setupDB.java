@@ -32,11 +32,7 @@ public class setupDB {
            String pass = "password";
            String db_url = "jdbc:mysql://localhost:3306/student_database";
             
-<<<<<<< HEAD
             Class.forName("com.mysql.jdbc.Driver").newInstance();
-=======
-            Class.forName("com.org.mysql.jdbc");
->>>>>>> upd
  
             System.out.println("connnecting to database");
             c = DriverManager.getConnection(db_url,user,pass);

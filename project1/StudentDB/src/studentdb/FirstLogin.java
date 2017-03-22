@@ -82,11 +82,17 @@ public class FirstLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Student_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Student_buttonActionPerformed
-        // TODO add your handling code here:
+dispose();//To close the current window
+
+StudentLogIn closeCurrentWindow = new StudentLogIn();
+ closeCurrentWindow.setVisible(true);//Open the new window        // TODO add your handling code here:
     }//GEN-LAST:event_Student_buttonActionPerformed
 
     private void Teacher_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Teacher_buttonActionPerformed
-        // TODO add your handling code here:
+dispose();//To close the current window
+
+ProfessorLogIn closeCurrentWindow = new ProfessorLogIn();
+ closeCurrentWindow.setVisible(true);//Open the new window        // TODO add your handling code here:
     }//GEN-LAST:event_Teacher_buttonActionPerformed
 
     /**

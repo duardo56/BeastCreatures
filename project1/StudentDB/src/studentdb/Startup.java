@@ -26,6 +26,8 @@ public class Startup {
 
         FirstLogin log = new FirstLogin();
         log.setVisible(true);
+        
+       
 
        
        

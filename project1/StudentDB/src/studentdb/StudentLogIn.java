@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package studentdb;
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author jean
@@ -16,6 +16,10 @@ public class StudentLogIn extends javax.swing.JFrame {
      */
     public StudentLogIn() {
         initComponents();
+    }
+     public static void infoBox(String infoMessage, String titleBar)
+    {
+        JOptionPane.showMessageDialog(null, infoMessage, "" + titleBar, JOptionPane.INFORMATION_MESSAGE);
     }
 
     /**
@@ -142,7 +146,8 @@ FirstLogin closeCurrentWindow = new FirstLogin();
 
     private void OKButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OKButtonActionPerformed
         // TODO add your handling code here:
-        
+        //If incorrect email or password
+        StudentLogIn.infoBox("You Entered a incorrect Email or Password", "ERROR");
     }//GEN-LAST:event_OKButtonActionPerformed
 
     private void studPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studPasswordActionPerformed

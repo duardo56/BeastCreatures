@@ -33,6 +33,9 @@ public class ProfessorLogIn extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jFileChooser1 = new javax.swing.JFileChooser();
+        query1 = java.beans.Beans.isDesignTime() ? null : ((javax.persistence.EntityManager)null).createQuery("");
+        query2 = java.beans.Beans.isDesignTime() ? null : ((javax.persistence.EntityManager)null).createQuery("");
         profPassword = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -211,10 +214,13 @@ FirstLogin closeCurrentWindow = new FirstLogin();
     private javax.swing.JButton OKButton1;
     private javax.swing.JButton backButton3;
     private javax.swing.JButton jButton2;
+    private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPasswordField profPassword;
     private javax.swing.JTextField profUsername;
+    private javax.persistence.Query query1;
+    private javax.persistence.Query query2;
     // End of variables declaration//GEN-END:variables
 }

@@ -22,7 +22,7 @@ public class Startup {
 //        LogInField menu = new LogInField(); // object for main menu
 //        menu.setVisible(true); //this is for the gui to display on the screen
        
-    //  setupDB db = new setupDB(); //initalize the database 
+      setupDB db = new setupDB(); //initalize the database 
 
         FirstLogin log = new FirstLogin();
         log.setVisible(true);

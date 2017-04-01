@@ -38,35 +38,35 @@ public class setupDB {
             c = DriverManager.getConnection(db_url,user,pass);
             System.out.println("connection successful");
             
-            
-            //select stuff from database 
-            stmt = c.createStatement();
-            
-            //make a query 
-            String sql; //pass in a hardcoded string here
-            sql = "SELECT * FROM Employees";
-            
-            ResultSet rs = stmt.executeQuery(sql);
-            
-            //get all of the data from the set 
-            while(rs.next())
-            {
-                int id = rs.getInt("id");
-                int age = rs.getInt("age");
-                String first = rs.getString("first");
-                String last = rs.getString("last");
-                
-                //display the values of the table
-                System.out.print("id: " + id);
-                System.out.print(", Age: " + age);
-                System.out.print(" , first: " + first);
-                System.out.println(", Last: " + last);
-            }
-           // clean up
-            rs.close();
-            stmt.close();
-            c.close(); 
-            
+//            
+//            //select stuff from database 
+//            stmt = c.createStatement();
+//            
+//            //make a query 
+//            String sql; //pass in a hardcoded string here
+//            sql = "SELECT * FROM Employees";
+//            
+//            ResultSet rs = stmt.executeQuery(sql);
+//            
+//            //get all of the data from the set 
+//            while(rs.next())
+//            {
+//                int id = rs.getInt("id");
+//                int age = rs.getInt("age");
+//                String first = rs.getString("first");
+//                String last = rs.getString("last");
+//                
+//                //display the values of the table
+//                System.out.print("id: " + id);
+//                System.out.print(", Age: " + age);
+//                System.out.print(" , first: " + first);
+//                System.out.println(", Last: " + last);
+//            }
+//           // clean up
+//            rs.close();
+//            stmt.close();
+//            c.close(); 
+//            
         }
         catch(ClassNotFoundException | InstantiationException | IllegalAccessException | SQLException e)
         {

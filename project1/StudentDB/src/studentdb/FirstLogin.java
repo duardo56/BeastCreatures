@@ -5,6 +5,8 @@
  */
 package studentdb;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author heavy_linux_guy
@@ -17,7 +19,12 @@ public class FirstLogin extends javax.swing.JFrame {
     public FirstLogin() {
         initComponents();
     }
-
+    public static void infoBox(String infoMessage, String titleBar)
+    {
+        JOptionPane.showMessageDialog(null, infoMessage, "" + titleBar, JOptionPane.INFORMATION_MESSAGE);
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -93,6 +100,8 @@ public class FirstLogin extends javax.swing.JFrame {
                 .addComponent(jButton1))
         );
 
+        jButton1.getAccessibleContext().setAccessibleName("HelpButtom");
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -111,7 +120,7 @@ ProfessorLogIn closeCurrentWindow = new ProfessorLogIn();
     }//GEN-LAST:event_Teacher_buttonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+    ProfessorLogIn.infoBox("If you have questions or problems please contact user support", "Help!");        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

@@ -176,7 +176,16 @@ FirstLogin closeCurrentWindow = new FirstLogin();
 
     private void OKButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OKButton1ActionPerformed
         // TODO add your handling code here:
-        //If incorrect email or password
+     
+    //saving email inputed to string 
+        String getUsername = profUsername.getText();
+        
+   //char array stores password
+        char[] a = profPassword.getPassword();
+  //converts char into string 
+         String getPassword = new String(a);
+         
+ //If incorrect email or password POPUP BOX
         ProfessorLogIn.infoBox("You Entered a incorrect Email or Password", "ERROR");
     }//GEN-LAST:event_OKButton1ActionPerformed
 
@@ -189,7 +198,8 @@ FirstLogin closeCurrentWindow = new FirstLogin();
     private void profPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profPasswordActionPerformed
         // TODO add your handling code here:
          //get password and save to string
-        String getPasswword = profPassword.getSelectedText();
+  
+       
     }//GEN-LAST:event_profPasswordActionPerformed
 
     //Copy of teacher buttom/ disabled and rename it Faculty(just the text in buttom); 

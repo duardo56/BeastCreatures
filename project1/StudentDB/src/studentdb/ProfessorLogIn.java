@@ -4,6 +4,11 @@
  * and open the template in the editor.
  */
 package studentdb;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 /**
  *
@@ -23,6 +28,41 @@ public class ProfessorLogIn extends javax.swing.JFrame {
     public static void infoBox(String infoMessage, String titleBar)
     {
         JOptionPane.showMessageDialog(null, infoMessage, "" + titleBar, JOptionPane.INFORMATION_MESSAGE);
+    }
+        public boolean validate(String username, String pass)
+    {
+        String query;
+        String dbUsername, dbPassword;
+        boolean login = false;
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student_database", "user", "password");
+            Statement stmt = (Statement) con.createStatement();
+            query = "SELECT email, Password FROM teacher_data;";
+            stmt.executeQuery(query);
+            ResultSet rs = stmt.getResultSet();
+
+            while(rs.next()){
+                dbUsername = rs.getString("email");
+                dbPassword = rs.getString("Password");
+
+                if(dbUsername.equals(username) && dbPassword.equals(pass)){
+                    //System.out.println("OK");
+                    login = true;
+                }
+              //  System.out.println(username + pass + " " + dbUsername + dbPassword);
+            }
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return login;
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -182,11 +222,23 @@ FirstLogin closeCurrentWindow = new FirstLogin();
         
    //char array stores password
         char[] a = profPassword.getPassword();
+        
   //converts char into string 
          String getPassword = new String(a);
          
- //If incorrect email or password POPUP BOX
+         if(validate(getUsername, getPassword))
+         {      
+         dispose();//To close the current window
+         FirstLogin closeCurrentWindow = new FirstLogin();
+         closeCurrentWindow.setVisible(true);//Open the new window 
+         }
+         else 
+         {
+        //If incorrect email or password POPUP BOX
         ProfessorLogIn.infoBox("You Entered a incorrect Email or Password", "ERROR");
+         }
+        
+        
     }//GEN-LAST:event_OKButton1ActionPerformed
 
     private void profUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profUsernameActionPerformed

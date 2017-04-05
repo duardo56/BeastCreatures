@@ -28,7 +28,7 @@ public class setupDB {
     
         try
         {   
-           String user = "root";
+           String user = "user";
            String pass = "password";
            String db_url = "jdbc:mysql://localhost:3306/student_database";
             
@@ -78,39 +78,5 @@ public class setupDB {
         
         
     }
-    public static boolean validate(String username, String pass)
-    {
-        String query;
-        String dbUsername, dbPassword;
-        boolean login = false;
-
-        try {
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student_database", "user", "password");
-            Statement stmt = (Statement) con.createStatement();
-            query = "SELECT prof_email, prof_password FROM professor_credentials;";
-            stmt.executeQuery(query);
-            ResultSet rs = stmt.getResultSet();
-
-            while(rs.next()){
-                dbUsername = rs.getString("username");
-                dbPassword = rs.getString("password");
-
-                if(dbUsername.equals(username) && dbPassword.equals(pass)){
-                    //System.out.println("OK");
-                    login = true;
-                }
-              //  System.out.println(username + pass + " " + dbUsername + dbPassword);
-            }
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return login;
-    }
+  
 }

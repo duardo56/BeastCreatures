@@ -219,7 +219,7 @@ FirstLogin closeCurrentWindow = new FirstLogin();
          
          if(validate(getUsername, getPassword))
          {      
-         dispose();//To close the current window
+        dispose();//To close the current window
          FirstLogin closeCurrentWindow = new FirstLogin();
          closeCurrentWindow.setVisible(true);//Open the new window 
          }

@@ -24,8 +24,8 @@ public class Startup {
        
       setupDB db = new setupDB(); //initalize the database 
 
-        FirstLogin log = new FirstLogin();
-        log.setVisible(true);
+       FirstLogin log = new FirstLogin();
+       log.setVisible(true);
         
        
 

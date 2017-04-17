@@ -9,6 +9,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 /**
  *
@@ -24,12 +25,13 @@ public class ProfessorLogIn extends javax.swing.JFrame {
     public ProfessorLogIn() {
         initComponents();
     }
-
+        //Infobox function
     public static void infoBox(String infoMessage, String titleBar)
     {
         JOptionPane.showMessageDialog(null, infoMessage, "" + titleBar, JOptionPane.INFORMATION_MESSAGE);
     }
-        public boolean validate(String username, String pass)
+        //Validate Function   
+    public boolean validate(String username, String pass)
     {
         String query;
         String dbUsername, dbPassword;
@@ -229,8 +231,13 @@ FirstLogin closeCurrentWindow = new FirstLogin();
          if(validate(getUsername, getPassword))
          {      
          dispose();//To close the current window
-         FirstLogin closeCurrentWindow = new FirstLogin();
-         closeCurrentWindow.setVisible(true);//Open the new window 
+      //   Prof_classes closeCurrentWindow = new Prof_classes();
+      //   closeCurrentWindow.setVisible(true);//Open the new window 
+               JFrame frame = new JFrame();
+                frame.setContentPane(new Prof_classes());
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
          }
          else 
          {

@@ -7,6 +7,7 @@
     <class>studentdb.TestsData</class>
     <class>studentdb.TeacherData</class>
     <class>studentdb.CoursesData</class>
+    <class>studentdb.TeacherSchedule</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/student_database?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="user"/>

@@ -26,6 +26,8 @@ public class StudentLogIn extends javax.swing.JFrame {
     {
         JOptionPane.showMessageDialog(null, infoMessage, "" + titleBar, JOptionPane.INFORMATION_MESSAGE);
     }
+     
+     //Validates function for Student_id && Password
      public boolean validate(String username, String pass)
     {
         String query;
@@ -36,12 +38,12 @@ public class StudentLogIn extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student_database", "user", "password");
             Statement stmt = (Statement) con.createStatement();
-            query = "SELECT email, Password FROM student_data;";
+            query = "SELECT Student_id, Password FROM student_data;";
             stmt.executeQuery(query);
             ResultSet rs = stmt.getResultSet();
 
             while(rs.next()){
-                dbUsername = rs.getString("email");
+                dbUsername = rs.getString("Student_id");
                 dbPassword = rs.getString("password");
 
                 if(dbUsername.equals(username) && dbPassword.equals(pass)){

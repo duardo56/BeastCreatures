@@ -24,13 +24,22 @@ public class ProfessorLogIn extends javax.swing.JFrame {
      */
     public ProfessorLogIn() {
         initComponents();
+         String a = profUsername.getText();
+         Prof_classes d = new Prof_classes(a);
+    }
+    static String con = profUsername.getText();
+   
+    //get Username and pass it on to Prof_classses
+    public ProfessorLogIn(String u){
+        String a = profUsername.getText();
+         Prof_classes d = new Prof_classes(a);
     }
         //Infobox function
     public static void infoBox(String infoMessage, String titleBar)
     {
         JOptionPane.showMessageDialog(null, infoMessage, "" + titleBar, JOptionPane.INFORMATION_MESSAGE);
     }
-        //Validate Function   
+        //Validate Function checking for Faculty_id && Password  
     public boolean validate(String username, String pass)
     {
         String query;
@@ -41,12 +50,12 @@ public class ProfessorLogIn extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student_database", "user", "password");
             Statement stmt = (Statement) con.createStatement();
-            query = "SELECT email, Password FROM teacher_data;";
+            query = "SELECT Faculty_id, Password FROM teacher_data;";
             stmt.executeQuery(query);
             ResultSet rs = stmt.getResultSet();
 
             while(rs.next()){
-                dbUsername = rs.getString("email");
+                dbUsername = rs.getString("Faculty_id");
                 dbPassword = rs.getString("Password");
 
                 if(dbUsername.equals(username) && dbPassword.equals(pass)){
@@ -302,7 +311,9 @@ FirstLogin closeCurrentWindow = new FirstLogin();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ProfessorLogIn().setVisible(true);
+                
             }
+            
            
         });
     }
@@ -316,6 +327,6 @@ FirstLogin closeCurrentWindow = new FirstLogin();
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPasswordField profPassword;
-    private javax.swing.JTextField profUsername;
+    private static javax.swing.JTextField profUsername;
     // End of variables declaration//GEN-END:variables
 }

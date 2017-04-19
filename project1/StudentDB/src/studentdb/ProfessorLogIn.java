@@ -17,8 +17,6 @@ import javax.swing.JOptionPane;
  */
 public class ProfessorLogIn extends javax.swing.JFrame {
     
-
-
     /**
      * Creates new form ProfessorLogIn
      */
@@ -27,13 +25,8 @@ public class ProfessorLogIn extends javax.swing.JFrame {
          String a = profUsername.getText();
          Prof_classes d = new Prof_classes(a);
     }
-    static String con = profUsername.getText();
-   
-    //get Username and pass it on to Prof_classses
-    public ProfessorLogIn(String u){
-        String a = profUsername.getText();
-         Prof_classes d = new Prof_classes(a);
-    }
+
+
         //Infobox function
     public static void infoBox(String infoMessage, String titleBar)
     {
@@ -45,7 +38,7 @@ public class ProfessorLogIn extends javax.swing.JFrame {
         String query;
         String dbUsername, dbPassword;
         boolean login = false;
-
+        String a  ;
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student_database", "user", "password");
@@ -61,6 +54,11 @@ public class ProfessorLogIn extends javax.swing.JFrame {
                 if(dbUsername.equals(username) && dbPassword.equals(pass)){
                     //System.out.println("OK");
                     login = true;
+                    //prof login verification 
+                    a = profUsername.getText();
+                   
+                    //make new obect to pull up professor schedule 
+                    Prof_classes d = new Prof_classes(a);
                 }
               //  System.out.println(username + pass + " " + dbUsername + dbPassword);
             }
@@ -247,6 +245,7 @@ FirstLogin closeCurrentWindow = new FirstLogin();
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
                 frame.setVisible(true);
+ 
          }
          else 
          {

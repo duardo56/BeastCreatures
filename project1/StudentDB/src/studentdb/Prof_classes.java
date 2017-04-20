@@ -22,17 +22,19 @@ public class Prof_classes extends JPanel {
     //base constructor
     public Prof_classes() {
         
-        initComponents();
-        if (!Beans.isDesignTime()) {
-            entityManager.getTransaction().begin();
-        }
+        //empty constructor
     }
-      String Thequery; //this will pass the where clause 
+      public static String Thequery; //this will pass the where clause 
       
       //consturctor to pass in the class;
       public Prof_classes(String Username) {
       inputQuery(Username);
        
+      //move here to fix
+      initComponents();
+        if (!Beans.isDesignTime()) {
+            entityManager.getTransaction().begin();
+        }
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -47,7 +49,9 @@ public class Prof_classes extends JPanel {
      */
     public static void inputQuery(String where){ 
         
-    String queryString = "SELECT * FROM TeacherSchedule WHERE Facutly_id = " + where;
+    String queryString = "SELECT * FROM TeacherSchedule WHERE Facutly_id = ";
+    queryString = queryString.concat(where);
+    System.out.println(where);
     }
    
  

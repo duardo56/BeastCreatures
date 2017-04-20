@@ -22,8 +22,7 @@ public class ProfessorLogIn extends javax.swing.JFrame {
      */
     public ProfessorLogIn() {
         initComponents();
-         String a = profUsername.getText();
-         Prof_classes d = new Prof_classes(a);
+       
     }
 
 
@@ -57,8 +56,7 @@ public class ProfessorLogIn extends javax.swing.JFrame {
                     //prof login verification 
                     a = profUsername.getText();
                    
-                    //make new obect to pull up professor schedule 
-                    Prof_classes d = new Prof_classes(a);
+             
                 }
               //  System.out.println(username + pass + " " + dbUsername + dbPassword);
             }
@@ -231,7 +229,7 @@ FirstLogin closeCurrentWindow = new FirstLogin();
         
    //char array stores password
         char[] a = profPassword.getPassword();
-        
+
   //converts char into string 
          String getPassword = new String(a);
          

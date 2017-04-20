@@ -17,18 +17,18 @@ import javax.swing.JPanel;
  *
  * @author jean
  */
-public class Prof_classes extends JPanel {
+public class Prof_classes extends JPanel{
     
-    //base constructor
-    public Prof_classes() {
-        
-        //empty constructor
-    }
+   
       public static String Thequery; //this will pass the where clause 
       
       //consturctor to pass in the class;
-      public Prof_classes(String Username) {
-      inputQuery(Username);
+      public Prof_classes() {
+           ProfessorLogIn a = new ProfessorLogIn();
+                a.setVisible(false);
+                Thequery = a.Profusername();
+                System.out.println("Hello " + Thequery);          // Twest to see that object string is being grabbed
+      
        
       //move here to fix
       initComponents();
@@ -36,6 +36,13 @@ public class Prof_classes extends JPanel {
             entityManager.getTransaction().begin();
         }
     }
+      public String getProfUsername()
+{
+   ProfessorLogIn a = new ProfessorLogIn();
+                a.setVisible(false);
+                String Username = a.Profusername();
+    return Username;
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -53,7 +60,7 @@ public class Prof_classes extends JPanel {
     queryString = queryString.concat(where);
     System.out.println(where);
     }
-   
+   String queryString= "SELECT * FROM teacher_schedule WHERE Facutly_id =" + Thequery + ";";
  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -61,7 +68,7 @@ public class Prof_classes extends JPanel {
         bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         entityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("student_database?zeroDateTimeBehavior=convertToNullPU").createEntityManager();
-        query = java.beans.Beans.isDesignTime() ? null : entityManager.createNativeQuery(Thequery, studentdb.TeacherSchedule.class);
+        query = java.beans.Beans.isDesignTime() ? null : entityManager.createNativeQuery(queryString, studentdb.TeacherSchedule.class);
         list = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(query.getResultList());
         masterScrollPane = new javax.swing.JScrollPane();
         masterTable = new javax.swing.JTable();
@@ -248,6 +255,14 @@ public class Prof_classes extends JPanel {
         /* Create and display the form */
         EventQueue.invokeLater(new Runnable() {
             public void run() {
+               
+//               ProfessorLogIn a = new ProfessorLogIn();
+//                a.setVisible(false);
+//                String Username = a.Profusername();
+Prof_classes a = new Prof_classes();
+            
+//System.out.print(pls);
+
                 JFrame frame = new JFrame();
                 frame.setContentPane(new Prof_classes());
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

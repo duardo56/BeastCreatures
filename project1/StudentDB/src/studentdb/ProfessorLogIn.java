@@ -238,8 +238,10 @@ FirstLogin closeCurrentWindow = new FirstLogin();
          dispose();//To close the current window
       //   Prof_classes closeCurrentWindow = new Prof_classes();
       //   closeCurrentWindow.setVisible(true);//Open the new window 
-               JFrame frame = new JFrame();
-                frame.setContentPane(new Prof_classes());
+      System.out.println(getUsername);        
+      JFrame frame = new JFrame();
+                frame.setContentPane(new Teacher_test(getUsername)); //to initialize the components
+               // Teacher_test b = new Teacher_test(getUsername); //pass in the string into the constructor
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
                 frame.setVisible(true);

@@ -25,7 +25,11 @@ public class ProfessorLogIn extends javax.swing.JFrame {
        
     }
 
-
+public static String Profusername()
+{
+  
+    return pls;
+}
         //Infobox function
     public static void infoBox(String infoMessage, String titleBar)
     {
@@ -54,7 +58,7 @@ public class ProfessorLogIn extends javax.swing.JFrame {
                     //System.out.println("OK");
                     login = true;
                     //prof login verification 
-                    a = profUsername.getText();
+                 //   a = profUsername.getText();
                    
              
                 }
@@ -220,13 +224,15 @@ dispose();//To close the current window
 FirstLogin closeCurrentWindow = new FirstLogin();
  closeCurrentWindow.setVisible(true);//Open the new window      // TODO add your handling code here:
     }//GEN-LAST:event_backButton3ActionPerformed
+public static String pls; 
 
     private void OKButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OKButton1ActionPerformed
         // TODO add your handling code here:
      
     //saving email inputed to string 
         String getUsername = profUsername.getText();
-        
+       // System.out.println(getUsername);
+        pls = getUsername;
    //char array stores password
         char[] a = profPassword.getPassword();
 
@@ -309,9 +315,13 @@ FirstLogin closeCurrentWindow = new FirstLogin();
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ProfessorLogIn().setVisible(true);
-                
+                ProfessorLogIn a = new ProfessorLogIn();
+                a.setVisible(true);
+//                Prof_classes b = new Prof_classes();
+//                b.setVisible(false);
+             //  System.out.println(pls);
             }
+            
             
            
         });

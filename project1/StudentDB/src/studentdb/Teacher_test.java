@@ -26,11 +26,9 @@ public class Teacher_test extends JPanel {
       public Teacher_test(String Username) 
       {
       inputQuery(Username); //pass the username as where cluase 
-
-  
-       
-  
-    
+        if (!Beans.isDesignTime()) {
+            entityManager.getTransaction().begin();
+        }
     }  
       //base constructor
     public Teacher_test() {
@@ -57,7 +55,7 @@ public class Teacher_test extends JPanel {
    
     public  void inputQuery(String where){ 
        where = "'" + where + "'"; //add quatation for column name
-    String queryString = "SELECT * FROM teacher_schedule WHERE Faculty_id = " + where + " ;";
+    String queryString = "SELECT * FROM teacher_schedule WHERE Facutly_id = " + where + ";";
     Thequery = queryString;
     System.out.println(Thequery + "debug");
     initComponents(Thequery); //needs to have a string parameter

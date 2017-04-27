@@ -12,7 +12,8 @@ import java.util.List;
 import javax.persistence.RollbackException;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
 /**
  *
  * @author jean
@@ -30,16 +31,7 @@ public class Teacher_test extends JPanel {
             entityManager.getTransaction().begin();
         }
     }  
-      //base constructor
-    public Teacher_test() {
-          
      
-        if (!Beans.isDesignTime()) {
-            entityManager.getTransaction().begin();
-        }
-        
-    }
-   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -57,15 +49,13 @@ public class Teacher_test extends JPanel {
        where = "'" + where + "'"; //add quatation for column name
     String queryString = "SELECT * FROM teacher_schedule WHERE Facutly_id = " + where + ";";
     Thequery = queryString;
-    System.out.println(Thequery + "debug");
     initComponents(Thequery); //needs to have a string parameter
     
     }
-   
+  
  
     private void initComponents(String TheQuery) {
         bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
-
         entityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("student_database?zeroDateTimeBehavior=convertToNullPU").createEntityManager();
         query = java.beans.Beans.isDesignTime() ? null : entityManager.createNativeQuery(this.Thequery, studentdb.TeacherSchedule.class);
         list = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(query.getResultList());
@@ -75,6 +65,7 @@ public class Teacher_test extends JPanel {
         refreshButton = new javax.swing.JButton();
         newButton = new javax.swing.JButton();
         deleteButton = new javax.swing.JButton();
+        goToClass = new javax.swing.JButton();
 
         FormListener formListener = new FormListener();
 
@@ -83,7 +74,7 @@ public class Teacher_test extends JPanel {
         columnBinding.setColumnName("Courses");
         columnBinding.setColumnClass(String.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${facutlyid}"));
-        columnBinding.setColumnName("Facutlyid");
+        columnBinding.setColumnName("Facultyid");
         columnBinding.setColumnClass(String.class);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
@@ -99,6 +90,9 @@ public class Teacher_test extends JPanel {
         newButton.addActionListener(formListener);
 
         deleteButton.setText("Delete");
+        
+        goToClass.setText("Class");
+        goToClass.addActionListener(formListener);
 
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ, masterTable, org.jdesktop.beansbinding.ELProperty.create("${selectedElement != null}"), deleteButton, org.jdesktop.beansbinding.BeanProperty.create("enabled"));
         bindingGroup.addBinding(binding);
@@ -112,6 +106,10 @@ public class Teacher_test extends JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addContainerGap(14, Short.MAX_VALUE)
+                        .addComponent(goToClass)
+                             .addGap(18, 18, 18)
+                            
                         .addComponent(newButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(deleteButton)
@@ -131,13 +129,14 @@ public class Teacher_test extends JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(masterScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
-                .addGap(26, 26, 26)
+                .addComponent(masterScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 306, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(saveButton)
                     .addComponent(refreshButton)
                     .addComponent(deleteButton)
-                    .addComponent(newButton))
+                    .addComponent(newButton)
+                    .addComponent(goToClass))
                 .addContainerGap())
         );
 
@@ -161,6 +160,11 @@ public class Teacher_test extends JPanel {
             else if (evt.getSource() == deleteButton) {
                 Teacher_test.this.deleteButtonActionPerformed(evt);
             }
+             else if (evt.getSource() == goToClass) {
+                Teacher_test.this.goToClassActionPerformed(evt);
+            }
+              
+    
         }
     }// </editor-fold>                        
 
@@ -196,7 +200,25 @@ public class Teacher_test extends JPanel {
         masterTable.setRowSelectionInterval(row, row);
         masterTable.scrollRectToVisible(masterTable.getCellRect(row, 0, true));
     }                                         
-    
+        private void classClickedActionPerformed(java.awt.event.ActionEvent evt) { 
+            
+        }
+      private void goToClassActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+  
+     //To take him to his course to input grades 
+                JFrame frame = new JFrame();
+                frame.setContentPane(new Practice()); //to initialize the components
+               // Teacher_test b = new Teacher_test(getUsername); //pass in the string into the constructor
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
+              
+        
+//         show_Students closeCurrentWindow = new show_Students();
+//        closeCurrentWindow.setVisible(true);//Open the new window 
+
+    }        
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
         try {
             entityManager.getTransaction().commit();
@@ -224,7 +246,9 @@ public class Teacher_test extends JPanel {
     private javax.persistence.Query query;
     private javax.swing.JButton refreshButton;
     private javax.swing.JButton saveButton;
+    private javax.swing.JButton goToClass;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
+  
     // End of variables declaration                   
     
     public void main(String[] args) {
@@ -251,7 +275,7 @@ public class Teacher_test extends JPanel {
         }
         //</editor-fold>
 
-        String bs = "pass thsi crap in";
+        String bs = "pass this in";
         
         /* Create and display the form */
         EventQueue.invokeLater(new Runnable() {
@@ -263,6 +287,7 @@ public class Teacher_test extends JPanel {
                 frame.pack();
                 frame.setVisible(true);
         
+                
                 //CHECK HERE 
             }
            

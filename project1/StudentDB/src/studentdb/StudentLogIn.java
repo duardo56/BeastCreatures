@@ -9,13 +9,14 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 /**
  *
  * @author jean
  */
 public class StudentLogIn extends javax.swing.JFrame {
-
+String query;
     /**
      * Creates new form StudentLogIn
      */
@@ -222,8 +223,12 @@ FirstLogin closeCurrentWindow = new FirstLogin();
          if(validate(getUsername, getPassword))
          {      
         dispose();//To close the current window
-         FirstLogin closeCurrentWindow = new FirstLogin();
-         closeCurrentWindow.setVisible(true);//Open the new window 
+        JFrame frame = new JFrame();
+                frame.setContentPane(new display_Student_Courses(getUsername)); //to initialize the components
+               // Teacher_test b = new Teacher_test(getUsername); //pass in the string into the constructor
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
          }
          else 
          {

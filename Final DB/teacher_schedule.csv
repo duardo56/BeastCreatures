@@ -1,0 +1,16 @@
+ts_sn,faculty_id,course_id,course_name
+1,100200,BIO3311 ,Biology
+2,100201,BUS2401,Business Analytics 
+3,100202,CHEM1105 ,Chemistry
+4,100203,CS1401,Computer Organization
+5,100204,CS1402,Data Structure I
+6,100205,CS2308,Theory of Computation
+7,100206,CS2401,Object Oriented Programming 
+8,100207,CS2412,Data Structure II
+9,100208,CS3304,Operating System 
+10,100209,CS3306,Software Engineering 
+11,100207,CS4316,Data Structure III
+12,100201,ENG1101,Technical Writing 
+13,100200,MATH1101,Calculus I
+14,100209,PHY2431,Phisics 
+15,100204,STAT3311 ,Regressional Statistics 

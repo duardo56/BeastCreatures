@@ -52,52 +52,51 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="newButton" linkSize="1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="deleteButton" linkSize="1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="refreshButton" linkSize="1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="saveButton" linkSize="1" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="studentidLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="firstNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lastNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="passwordLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="emailLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="genderLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="dateOfBirthLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="streetaddressLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cityLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="stateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="studentidField" alignment="0" pref="869" max="32767" attributes="0"/>
-                                  <Component id="firstNameField" alignment="0" pref="869" max="32767" attributes="0"/>
-                                  <Component id="lastNameField" alignment="0" pref="869" max="32767" attributes="0"/>
-                                  <Component id="passwordField" alignment="0" pref="869" max="32767" attributes="0"/>
-                                  <Component id="emailField" alignment="0" pref="869" max="32767" attributes="0"/>
-                                  <Component id="genderField" alignment="0" pref="869" max="32767" attributes="0"/>
-                                  <Component id="dateOfBirthField" alignment="0" pref="869" max="32767" attributes="0"/>
-                                  <Component id="streetaddressField" alignment="0" pref="869" max="32767" attributes="0"/>
-                                  <Component id="cityField" alignment="0" pref="869" max="32767" attributes="0"/>
-                                  <Component id="stateField" alignment="0" pref="869" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="masterScrollPane" pref="945" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <Component id="newButton" linkSize="1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
+              <Component id="deleteButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="refreshButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="saveButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="studentidLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="firstNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="lastNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="emailLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="genderLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="dateOfBirthLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="streetaddressLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="cityLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="stateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="passwordLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="gpaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="studentidField" alignment="0" pref="315" max="32767" attributes="0"/>
+                  <Component id="firstNameField" alignment="0" pref="315" max="32767" attributes="0"/>
+                  <Component id="lastNameField" alignment="0" pref="315" max="32767" attributes="0"/>
+                  <Component id="emailField" alignment="0" pref="315" max="32767" attributes="0"/>
+                  <Component id="genderField" alignment="0" pref="315" max="32767" attributes="0"/>
+                  <Component id="dateOfBirthField" alignment="0" pref="315" max="32767" attributes="0"/>
+                  <Component id="streetaddressField" alignment="0" pref="315" max="32767" attributes="0"/>
+                  <Component id="cityField" alignment="0" pref="315" max="32767" attributes="0"/>
+                  <Component id="stateField" alignment="0" pref="315" max="32767" attributes="0"/>
+                  <Component id="passwordField" alignment="0" pref="315" max="32767" attributes="0"/>
+                  <Component id="gpaField" alignment="0" pref="315" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Component id="masterScrollPane" pref="380" max="32767" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -105,7 +104,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Component id="masterScrollPane" pref="358" max="32767" attributes="0"/>
+              <Component id="masterScrollPane" pref="130" max="32767" attributes="0"/>
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="studentidLabel" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -120,11 +119,6 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lastNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lastNameField" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="passwordLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="passwordField" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -155,6 +149,16 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="stateLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="stateField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="passwordLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="passwordField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="gpaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="gpaField" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" max="-2" attributes="1"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -191,33 +195,37 @@
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="2"/>
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
               </Subbinding>
-              <Subbinding sourcePath="${password}">
+              <Subbinding sourcePath="${email}">
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="3"/>
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
               </Subbinding>
-              <Subbinding sourcePath="${email}">
+              <Subbinding sourcePath="${gender}">
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="4"/>
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
               </Subbinding>
-              <Subbinding sourcePath="${gender}">
+              <Subbinding sourcePath="${dateOfBirth}">
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="5"/>
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
               </Subbinding>
-              <Subbinding sourcePath="${dateOfBirth}">
+              <Subbinding sourcePath="${streetaddress}">
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="6"/>
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
               </Subbinding>
-              <Subbinding sourcePath="${streetaddress}">
+              <Subbinding sourcePath="${city}">
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="7"/>
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
               </Subbinding>
-              <Subbinding sourcePath="${city}">
+              <Subbinding sourcePath="${state}">
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="8"/>
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
               </Subbinding>
-              <Subbinding sourcePath="${state}">
+              <Subbinding sourcePath="${password}">
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="9"/>
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${gpa}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="10"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Double.class"/>
               </Subbinding>
             </BindingProperty>
           </BindingProperties>
@@ -241,11 +249,6 @@
     <Component class="javax.swing.JLabel" name="lastNameLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Last Name:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="passwordLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Password:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="emailLabel">
@@ -278,6 +281,16 @@
         <Property name="text" type="java.lang.String" value="State:"/>
       </Properties>
     </Component>
+    <Component class="javax.swing.JLabel" name="passwordLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Password:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="gpaLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Gpa:"/>
+      </Properties>
+    </Component>
     <Component class="javax.swing.JTextField" name="studentidField">
       <BindingProperties>
         <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.studentid}" target="studentidField" targetPath="text" updateStrategy="0" immediately="false">
@@ -300,14 +313,6 @@
           <Property name="incompletePathValue" type="java.lang.String" value="null"/>
         </BindingProperty>
         <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="lastNameField" targetPath="enabled" updateStrategy="1" immediately="false"/>
-      </BindingProperties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="passwordField">
-      <BindingProperties>
-        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.password}" target="passwordField" targetPath="text" updateStrategy="0" immediately="false">
-          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
-        </BindingProperty>
-        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="passwordField" targetPath="enabled" updateStrategy="1" immediately="false"/>
       </BindingProperties>
     </Component>
     <Component class="javax.swing.JTextField" name="emailField">
@@ -356,6 +361,22 @@
           <Property name="incompletePathValue" type="java.lang.String" value="null"/>
         </BindingProperty>
         <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="stateField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="passwordField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.password}" target="passwordField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="passwordField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="gpaField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.gpa}" target="gpaField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="gpaField" targetPath="enabled" updateStrategy="1" immediately="false"/>
       </BindingProperties>
     </Component>
     <Component class="javax.swing.JButton" name="saveButton">

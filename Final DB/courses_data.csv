@@ -1,0 +1,141 @@
+cd_sn,course_id,course_name
+1,BIO3311 ,Biology
+2,BIO3311 ,Biology
+3,BIO3311 ,Biology
+4,BIO3311 ,Biology
+5,BIO3311 ,Biology
+6,BIO3311 ,Biology
+7,BIO3311 ,Biology
+8,BIO3311 ,Biology
+9,BIO3311 ,Biology
+10,BIO3311 ,Biology
+11,BIO3311 ,Biology
+12,BIO3311 ,Biology
+13,BIO3311 ,Biology
+14,BUS2401,Business Analytics
+15,BUS2401,Business Analytics
+16,BUS2401,Business Analytics
+17,BUS2401,Business Analytics
+18,BUS2401,Business Analytics
+19,BUS2401,Business Analytics
+20,BUS2401,Business Analytics
+21,BUS2401,Business Analytics
+22,BUS2401,Business Analytics
+23,BUS2401,Business Analytics
+24,BUS2401,Business Analytics
+25,BUS2401,Business Analytics
+26,CHEM1105 ,Chemistry
+27,CHEM1105 ,Chemistry
+28,CHEM1105 ,Chemistry
+29,CHEM1105 ,Chemistry
+30,CHEM1105 ,Chemistry
+31,CHEM1105 ,Chemistry
+32,CS1401,Computer Organization
+33,CS1401,Computer Organization
+34,CS1401,Computer Organization
+35,CS1401,Computer Organization
+36,CS1401,Computer Organization
+37,CS1401,Computer Organization
+38,CS1401,Computer Organization
+39,CS1401,Computer Organization
+40,CS1401,Computer Organization
+41,CS1402,Data Structure I
+42,CS1402,Data Structure I
+43,CS1402,Data Structure I
+44,CS1402,Data Structure I
+45,CS1402,Data Structure I
+46,CS1402,Data Structure I
+47,CS1402,Data Structure I
+48,CS1402,Data Structure I
+49,CS1402,Data Structure I
+50,CS2308,Theory of Computation
+51,CS2308,Theory of Computation
+52,CS2308,Theory of Computation
+53,CS2308,Theory of Computation
+54,CS2308,Theory of Computation
+55,CS2308,Theory of Computation
+56,CS2401,Object Oriented Programming
+57,CS2401,Object Oriented Programming
+58,CS2401,Object Oriented Programming
+59,CS2401,Object Oriented Programming
+60,CS2401,Object Oriented Programming
+61,CS2401,Object Oriented Programming
+62,CS2401,Object Oriented Programming
+63,CS2401,Object Oriented Programming
+64,CS2401,Object Oriented Programming
+65,CS2412,Data Structure II
+66,CS2412,Data Structure II
+67,CS2412,Data Structure II
+68,CS2412,Data Structure II
+69,CS2412,Data Structure II
+70,CS2412,Data Structure II
+71,CS2412,Data Structure II
+72,CS2412,Data Structure II
+73,CS2412,Data Structure II
+74,CS2412,Data Structure II
+75,CS2412,Data Structure II
+76,CS2412,Data Structure II
+77,CS2412,Data Structure II
+78,CS3304,Operating System
+79,CS3304,Operating System
+80,CS3304,Operating System
+81,CS3304,Operating System
+82,CS3304,Operating System
+83,CS3304,Operating System
+84,CS3304,Operating System
+85,CS3306,Software Engineering
+86,CS3306,Software Engineering
+87,CS3306,Software Engineering
+88,CS3306,Software Engineering
+89,CS3306,Software Engineering
+90,CS3306,Software Engineering
+91,CS3306,Data Structure III
+92,CS4316,Data Structure III
+93,CS4316,Data Structure III
+94,CS4316,Data Structure III
+95,CS4316,Data Structure III
+96,CS4316,Data Structure III
+97,ENG1101,Techincal Writing
+98,ENG1101,Techincal Writing
+99,ENG1101,Techincal Writing
+100,ENG1101,Techincal Writing
+101,ENG1101,Techincal Writing
+102,ENG1101,Techincal Writing
+103,ENG1101,Techincal Writing
+104,ENG1101,Techincal Writing
+105,ENG1101,Techincal Writing
+106,ENG1101,Techincal Writing
+107,ENG1101,Techincal Writing
+108,ENG1101,Techincal Writing
+109,MATH1101,Calculus I 
+110,MATH1101,Calculus I 
+111,MATH1101,Calculus I 
+112,MATH1101,Calculus I 
+113,MATH1101,Calculus I 
+114,MATH1101,Calculus I 
+115,MATH1101,Calculus I 
+116,MATH1101,Calculus I 
+117,MATH1101,Calculus I 
+118,MATH1101,Calculus I 
+119,MATH1101,Calculus I 
+120,MATH1101,Calculus I 
+121,MATH1101,Calculus I 
+122,MATH1101,Calculus I 
+123,MATH1101,Calculus I 
+124,MATH1101,Calculus I 
+125,MATH1101,Calculus I 
+126,MATH1101,Calculus I 
+127,PHY2431,Phisics
+128,PHY2431,Phisics
+129,PHY2431,Phisics
+130,PHY2431,Phisics
+131,PHY2431,Phisics
+132,PHY2431,Phisics
+133,PHY2431,Phisics
+134,STAT3311 ,Regressional Statistics
+135,STAT3311 ,Regressional Statistics
+136,STAT3311 ,Regressional Statistics
+137,STAT3311 ,Regressional Statistics
+138,STAT3311 ,Regressional Statistics
+139,STAT3311 ,Regressional Statistics
+140,STAT3311 ,Regressional Statistics

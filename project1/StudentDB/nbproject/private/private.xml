@@ -3,13 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/jean/Desktop/BeastCreatures/BeastCreatures/project1/StudentDB/src/studentdb/display_Student_Courses.java</file>
-            <file>file:/C:/Users/jean/Desktop/BeastCreatures/BeastCreatures/project1/StudentDB/src/studentdb/FirstLogin.java</file>
-            <file>file:/C:/Users/jean/Desktop/BeastCreatures/BeastCreatures/project1/StudentDB/src/studentdb/allStudents.java</file>
-            <file>file:/C:/Users/jean/Desktop/BeastCreatures/BeastCreatures/project1/StudentDB/src/studentdb/allTeachers.java</file>
-            <file>file:/C:/Users/jean/Desktop/BeastCreatures/BeastCreatures/project1/StudentDB/src/studentdb/ProfessorLogIn.java</file>
-            <file>file:/C:/Users/jean/Desktop/BeastCreatures/BeastCreatures/project1/StudentDB/src/studentdb/AdminLogIn.java</file>
-            <file>file:/C:/Users/jean/Desktop/BeastCreatures/BeastCreatures/project1/StudentDB/src/studentdb/AdminView.java</file>
+            <file>file:/C:/Users/Boss/BeastCreatures/project1/StudentDB/src/studentdb/FirstLogin.java</file>
+            <file>file:/C:/Users/Boss/BeastCreatures/project1/StudentDB/src/studentdb/Teacher_test.java</file>
+            <file>file:/C:/Users/Boss/BeastCreatures/project1/StudentDB/src/studentdb/TeacherSchedule.java</file>
+            <file>file:/C:/Users/Boss/BeastCreatures/project1/StudentDB/src/studentdb/Prof_classes.java</file>
+            <file>file:/C:/Users/Boss/BeastCreatures/project1/StudentDB/src/studentdb/ProfessorLogIn.java</file>
+            <file>file:/C:/Users/Boss/BeastCreatures/project1/StudentDB/src/studentdb/CoursesData.java</file>
+            <file>file:/C:/Users/Boss/BeastCreatures/project1/StudentDB/src/studentdb/Stud_classes.java</file>
+            <file>file:/C:/Users/Boss/BeastCreatures/project1/StudentDB/src/studentdb/TeacherData.java</file>
+            <file>file:/C:/Users/Boss/BeastCreatures/project1/StudentDB/src/studentdb/StudentSchedulePK.java</file>
+            <file>file:/C:/Users/Boss/BeastCreatures/project1/StudentDB/src/studentdb/TeacherDataPK.java</file>
         </group>
     </open-files>
 </project-private>

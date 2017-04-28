@@ -16,25 +16,28 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author euclidesafonso
+ * @author Boss
  */
 @Entity
-@Table(name = "student_data", catalog = "student_database", schema = "")
+@Table(name = "student_data")
+@XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "StudentData.findAll", query = "SELECT s FROM StudentData s"),
     @NamedQuery(name = "StudentData.findByStudentid", query = "SELECT s FROM StudentData s WHERE s.studentid = :studentid"),
     @NamedQuery(name = "StudentData.findByFirstName", query = "SELECT s FROM StudentData s WHERE s.firstName = :firstName"),
     @NamedQuery(name = "StudentData.findByLastName", query = "SELECT s FROM StudentData s WHERE s.lastName = :lastName"),
-    @NamedQuery(name = "StudentData.findByPassword", query = "SELECT s FROM StudentData s WHERE s.password = :password"),
     @NamedQuery(name = "StudentData.findByEmail", query = "SELECT s FROM StudentData s WHERE s.email = :email"),
     @NamedQuery(name = "StudentData.findByGender", query = "SELECT s FROM StudentData s WHERE s.gender = :gender"),
     @NamedQuery(name = "StudentData.findByDateOfBirth", query = "SELECT s FROM StudentData s WHERE s.dateOfBirth = :dateOfBirth"),
     @NamedQuery(name = "StudentData.findByStreetaddress", query = "SELECT s FROM StudentData s WHERE s.streetaddress = :streetaddress"),
     @NamedQuery(name = "StudentData.findByCity", query = "SELECT s FROM StudentData s WHERE s.city = :city"),
-    @NamedQuery(name = "StudentData.findByState", query = "SELECT s FROM StudentData s WHERE s.state = :state")})
+    @NamedQuery(name = "StudentData.findByState", query = "SELECT s FROM StudentData s WHERE s.state = :state"),
+    @NamedQuery(name = "StudentData.findByPassword", query = "SELECT s FROM StudentData s WHERE s.password = :password"),
+    @NamedQuery(name = "StudentData.findByGpa", query = "SELECT s FROM StudentData s WHERE s.gpa = :gpa")})
 public class StudentData implements Serializable {
 
     @Transient
@@ -51,9 +54,6 @@ public class StudentData implements Serializable {
     @Basic(optional = false)
     @Column(name = "last_name")
     private String lastName;
-    @Basic(optional = false)
-    @Column(name = "password")
-    private String password;
     @Basic(optional = false)
     @Column(name = "email")
     private String email;
@@ -72,6 +72,12 @@ public class StudentData implements Serializable {
     @Basic(optional = false)
     @Column(name = "State")
     private String state;
+    @Basic(optional = false)
+    @Column(name = "password")
+    private String password;
+    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
+    @Column(name = "GPA")
+    private Double gpa;
 
     public StudentData() {
     }
@@ -80,17 +86,17 @@ public class StudentData implements Serializable {
         this.studentid = studentid;
     }
 
-    public StudentData(String studentid, String firstName, String lastName, String password, String email, String gender, String dateOfBirth, String streetaddress, String city, String state) {
+    public StudentData(String studentid, String firstName, String lastName, String email, String gender, String dateOfBirth, String streetaddress, String city, String state, String password) {
         this.studentid = studentid;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.password = password;
         this.email = email;
         this.gender = gender;
         this.dateOfBirth = dateOfBirth;
         this.streetaddress = streetaddress;
         this.city = city;
         this.state = state;
+        this.password = password;
     }
 
     public String getStudentid() {
@@ -121,16 +127,6 @@ public class StudentData implements Serializable {
         String oldLastName = this.lastName;
         this.lastName = lastName;
         changeSupport.firePropertyChange("lastName", oldLastName, lastName);
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        String oldPassword = this.password;
-        this.password = password;
-        changeSupport.firePropertyChange("password", oldPassword, password);
     }
 
     public String getEmail() {
@@ -191,6 +187,26 @@ public class StudentData implements Serializable {
         String oldState = this.state;
         this.state = state;
         changeSupport.firePropertyChange("state", oldState, state);
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        String oldPassword = this.password;
+        this.password = password;
+        changeSupport.firePropertyChange("password", oldPassword, password);
+    }
+
+    public Double getGpa() {
+        return gpa;
+    }
+
+    public void setGpa(Double gpa) {
+        Double oldGpa = this.gpa;
+        this.gpa = gpa;
+        changeSupport.firePropertyChange("gpa", oldGpa, gpa);
     }
 
     @Override

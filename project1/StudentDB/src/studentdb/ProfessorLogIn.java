@@ -247,7 +247,7 @@ public static String pls;
       System.out.println(getUsername);        
       JFrame frame = new JFrame();
                 frame.setContentPane(new Teacher_test(getUsername)); //to initialize the components
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.pack();
                 frame.setVisible(true);
  

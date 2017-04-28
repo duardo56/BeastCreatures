@@ -5,8 +5,6 @@
  */
 package studentdb;
 
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -15,28 +13,24 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Boss
+ * @author heavy_linux_guy
  */
 @Entity
 @Table(name = "teacher_data")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "TeacherData.findAll", query = "SELECT t FROM TeacherData t"),
-    @NamedQuery(name = "TeacherData.findByFacultyid", query = "SELECT t FROM TeacherData t WHERE t.facultyid = :facultyid"),
-    @NamedQuery(name = "TeacherData.findByFirstName", query = "SELECT t FROM TeacherData t WHERE t.firstName = :firstName"),
-    @NamedQuery(name = "TeacherData.findByLastName", query = "SELECT t FROM TeacherData t WHERE t.lastName = :lastName"),
-    @NamedQuery(name = "TeacherData.findByEmail", query = "SELECT t FROM TeacherData t WHERE t.email = :email"),
-    @NamedQuery(name = "TeacherData.findByGender", query = "SELECT t FROM TeacherData t WHERE t.gender = :gender"),
-    @NamedQuery(name = "TeacherData.findByPassword", query = "SELECT t FROM TeacherData t WHERE t.password = :password")})
+    @NamedQuery(name = "TeacherData.findAll", query = "SELECT t FROM TeacherData t")
+    , @NamedQuery(name = "TeacherData.findByFacultyid", query = "SELECT t FROM TeacherData t WHERE t.facultyid = :facultyid")
+    , @NamedQuery(name = "TeacherData.findByFirstName", query = "SELECT t FROM TeacherData t WHERE t.firstName = :firstName")
+    , @NamedQuery(name = "TeacherData.findByLastName", query = "SELECT t FROM TeacherData t WHERE t.lastName = :lastName")
+    , @NamedQuery(name = "TeacherData.findByEmail", query = "SELECT t FROM TeacherData t WHERE t.email = :email")
+    , @NamedQuery(name = "TeacherData.findByGender", query = "SELECT t FROM TeacherData t WHERE t.gender = :gender")
+    , @NamedQuery(name = "TeacherData.findByPassword", query = "SELECT t FROM TeacherData t WHERE t.password = :password")})
 public class TeacherData implements Serializable {
-
-    @Transient
-    private PropertyChangeSupport changeSupport = new PropertyChangeSupport(this);
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -80,9 +74,7 @@ public class TeacherData implements Serializable {
     }
 
     public void setFacultyid(String facultyid) {
-        String oldFacultyid = this.facultyid;
         this.facultyid = facultyid;
-        changeSupport.firePropertyChange("facultyid", oldFacultyid, facultyid);
     }
 
     public String getFirstName() {
@@ -90,9 +82,7 @@ public class TeacherData implements Serializable {
     }
 
     public void setFirstName(String firstName) {
-        String oldFirstName = this.firstName;
         this.firstName = firstName;
-        changeSupport.firePropertyChange("firstName", oldFirstName, firstName);
     }
 
     public String getLastName() {
@@ -100,9 +90,7 @@ public class TeacherData implements Serializable {
     }
 
     public void setLastName(String lastName) {
-        String oldLastName = this.lastName;
         this.lastName = lastName;
-        changeSupport.firePropertyChange("lastName", oldLastName, lastName);
     }
 
     public String getEmail() {
@@ -110,9 +98,7 @@ public class TeacherData implements Serializable {
     }
 
     public void setEmail(String email) {
-        String oldEmail = this.email;
         this.email = email;
-        changeSupport.firePropertyChange("email", oldEmail, email);
     }
 
     public String getGender() {
@@ -120,9 +106,7 @@ public class TeacherData implements Serializable {
     }
 
     public void setGender(String gender) {
-        String oldGender = this.gender;
         this.gender = gender;
-        changeSupport.firePropertyChange("gender", oldGender, gender);
     }
 
     public String getPassword() {
@@ -130,9 +114,7 @@ public class TeacherData implements Serializable {
     }
 
     public void setPassword(String password) {
-        String oldPassword = this.password;
         this.password = password;
-        changeSupport.firePropertyChange("password", oldPassword, password);
     }
 
     @Override
@@ -158,14 +140,6 @@ public class TeacherData implements Serializable {
     @Override
     public String toString() {
         return "studentdb.TeacherData[ facultyid=" + facultyid + " ]";
-    }
-
-    public void addPropertyChangeListener(PropertyChangeListener listener) {
-        changeSupport.addPropertyChangeListener(listener);
-    }
-
-    public void removePropertyChangeListener(PropertyChangeListener listener) {
-        changeSupport.removePropertyChangeListener(listener);
     }
     
 }

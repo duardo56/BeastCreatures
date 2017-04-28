@@ -3,12 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/jean/Desktop/BeastCreatures/BeastCreatures/project1/StudentDB/src/studentdb/StudentLogIn.java</file>
             <file>file:/C:/Users/jean/Desktop/BeastCreatures/BeastCreatures/project1/StudentDB/src/studentdb/display_Student_Courses.java</file>
+            <file>file:/C:/Users/jean/Desktop/BeastCreatures/BeastCreatures/project1/StudentDB/src/studentdb/FirstLogin.java</file>
+            <file>file:/C:/Users/jean/Desktop/BeastCreatures/BeastCreatures/project1/StudentDB/src/studentdb/allStudents.java</file>
+            <file>file:/C:/Users/jean/Desktop/BeastCreatures/BeastCreatures/project1/StudentDB/src/studentdb/allTeachers.java</file>
             <file>file:/C:/Users/jean/Desktop/BeastCreatures/BeastCreatures/project1/StudentDB/src/studentdb/ProfessorLogIn.java</file>
-            <file>file:/C:/Users/jean/Desktop/BeastCreatures/BeastCreatures/project1/StudentDB/src/studentdb/Prof_classes.java</file>
-            <file>file:/C:/Users/jean/Desktop/BeastCreatures/BeastCreatures/project1/StudentDB/src/studentdb/Teacher_test.java</file>
-            <file>file:/C:/Users/jean/Desktop/BeastCreatures/BeastCreatures/project1/StudentDB/src/studentdb/Practice.java</file>
+            <file>file:/C:/Users/jean/Desktop/BeastCreatures/BeastCreatures/project1/StudentDB/src/studentdb/AdminLogIn.java</file>
+            <file>file:/C:/Users/jean/Desktop/BeastCreatures/BeastCreatures/project1/StudentDB/src/studentdb/AdminView.java</file>
         </group>
     </open-files>
 </project-private>

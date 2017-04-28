@@ -25,9 +25,10 @@ import javax.persistence.Transient;
 @Table(name = "teacher_schedule", catalog = "student_database", schema = "")
 @NamedQueries({
     @NamedQuery(name = "TeacherSchedule.findAll", query = "SELECT t FROM TeacherSchedule t"),
-    @NamedQuery(name = "TeacherSchedule.findByFacutlyid", query = "SELECT t FROM TeacherSchedule t WHERE t.facutlyid = :facutlyid"),
+    @NamedQuery(name = "TeacherSchedule.findByFacultyid", query = "SELECT t FROM TeacherSchedule t WHERE t.facultyid = :facultyid"),
     @NamedQuery(name = "TeacherSchedule.findByCourses", query = "SELECT t FROM TeacherSchedule t WHERE t.courses = :courses")})
 public class TeacherSchedule implements Serializable {
+
 
     @Transient
     private PropertyChangeSupport changeSupport = new PropertyChangeSupport(this);
@@ -35,8 +36,8 @@ public class TeacherSchedule implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
-    @Column(name = "Facutly_id")
-    private String facutlyid;
+    @Column(name = "Faculty_id")
+    private String facultyid;
     @Basic(optional = false)
     @Column(name = "Courses")
     private String courses;
@@ -44,23 +45,23 @@ public class TeacherSchedule implements Serializable {
     public TeacherSchedule() {
     }
 
-    public TeacherSchedule(String facutlyid) {
-        this.facutlyid = facutlyid;
+    public TeacherSchedule(String facultyid) {
+        this.facultyid = facultyid;
     }
 
-    public TeacherSchedule(String facutlyid, String courses) {
-        this.facutlyid = facutlyid;
+    public TeacherSchedule(String facultyid, String courses) {
+        this.facultyid = facultyid;
         this.courses = courses;
     }
 
-    public String getFacutlyid() {
-        return facutlyid;
+    public String getFacultyid() {
+        return facultyid;
     }
 
-    public void setFacutlyid(String facutlyid) {
-        String oldFacutlyid = this.facutlyid;
-        this.facutlyid = facutlyid;
-        changeSupport.firePropertyChange("facutlyid", oldFacutlyid, facutlyid);
+    public void setFacultyid(String facultyid) {
+        String oldFacultyid = this.facultyid;
+        this.facultyid = facultyid;
+        changeSupport.firePropertyChange("facultyid", oldFacultyid, facultyid);
     }
 
     public String getCourses() {
@@ -76,7 +77,7 @@ public class TeacherSchedule implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (facutlyid != null ? facutlyid.hashCode() : 0);
+        hash += (facultyid != null ? facultyid.hashCode() : 0);
         return hash;
     }
 
@@ -87,7 +88,7 @@ public class TeacherSchedule implements Serializable {
             return false;
         }
         TeacherSchedule other = (TeacherSchedule) object;
-        if ((this.facutlyid == null && other.facutlyid != null) || (this.facutlyid != null && !this.facutlyid.equals(other.facutlyid))) {
+        if ((this.facultyid == null && other.facultyid != null) || (this.facultyid != null && !this.facultyid.equals(other.facultyid))) {
             return false;
         }
         return true;
@@ -95,7 +96,7 @@ public class TeacherSchedule implements Serializable {
 
     @Override
     public String toString() {
-        return "studentdb.TeacherSchedule[ facutlyid=" + facutlyid + " ]";
+        return "studentdb.TeacherSchedule[ facultyid=" + facultyid + " ]";
     }
 
     public void addPropertyChangeListener(PropertyChangeListener listener) {
@@ -105,5 +106,6 @@ public class TeacherSchedule implements Serializable {
     public void removePropertyChangeListener(PropertyChangeListener listener) {
         changeSupport.removePropertyChangeListener(listener);
     }
+
     
 }

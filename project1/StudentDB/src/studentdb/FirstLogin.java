@@ -39,6 +39,7 @@ public class FirstLogin extends javax.swing.JFrame {
         Student_button = new javax.swing.JButton();
         Teacher_button = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        Admin = new javax.swing.JButton();
 
         jLabel2.setText("jLabel2");
 
@@ -69,23 +70,33 @@ public class FirstLogin extends javax.swing.JFrame {
             }
         });
 
+        Admin.setText("Admin");
+        Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AdminActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(Teacher_button)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
-                .addComponent(Student_button)
-                .addGap(17, 17, 17))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(130, 130, 130)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(Teacher_button))
+                    .addComponent(Admin))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(Student_button)
+                        .addGap(17, 17, 17))
+                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -97,7 +108,9 @@ public class FirstLogin extends javax.swing.JFrame {
                     .addComponent(Student_button)
                     .addComponent(Teacher_button))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                .addComponent(jButton1))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(Admin)))
         );
 
         jButton1.getAccessibleContext().setAccessibleName("HelpButtom");
@@ -109,19 +122,26 @@ public class FirstLogin extends javax.swing.JFrame {
 dispose();//To close the current window
 
 StudentLogIn closeCurrentWindow = new StudentLogIn();
- closeCurrentWindow.setVisible(true);//Open the new window        // TODO add your handling code here:
+ closeCurrentWindow.setVisible(true);//Open the new window        
     }//GEN-LAST:event_Student_buttonActionPerformed
 
     private void Teacher_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Teacher_buttonActionPerformed
 dispose();//To close the current window
 
 ProfessorLogIn closeCurrentWindow = new ProfessorLogIn();
- closeCurrentWindow.setVisible(true);//Open the new window        // TODO add your handling code here:
+ closeCurrentWindow.setVisible(true);//Open the new window        
     }//GEN-LAST:event_Teacher_buttonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     ProfessorLogIn.infoBox("If you have questions or problems please contact user support", "Help!");        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminActionPerformed
+      dispose();//To close the current window
+       
+AdminLogIn closeCurrentWindow = new AdminLogIn();
+ closeCurrentWindow.setVisible(true);//Open the new window
+    }//GEN-LAST:event_AdminActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,6 +180,7 @@ ProfessorLogIn closeCurrentWindow = new ProfessorLogIn();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Admin;
     private javax.swing.JButton Student_button;
     private javax.swing.JButton Teacher_button;
     private javax.swing.JButton jButton1;

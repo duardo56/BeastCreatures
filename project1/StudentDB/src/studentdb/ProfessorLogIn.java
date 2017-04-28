@@ -222,7 +222,7 @@ System.exit(0);         // TODO add your handling code here:
 dispose();//To close the current window
 
 FirstLogin closeCurrentWindow = new FirstLogin();
- closeCurrentWindow.setVisible(true);//Open the new window      // TODO add your handling code here:
+ closeCurrentWindow.setVisible(true);//Open the new window     
     }//GEN-LAST:event_backButton3ActionPerformed
 public static String pls; 
 
@@ -233,7 +233,8 @@ public static String pls;
         String getUsername = profUsername.getText();
        // System.out.println(getUsername);
         pls = getUsername;
-   //char array stores password
+        
+   //char array stores password that was inputed
         char[] a = profPassword.getPassword();
 
   //converts char into string 
@@ -242,12 +243,10 @@ public static String pls;
          if(validate(getUsername, getPassword))
          {      
          dispose();//To close the current window
-      //   Prof_classes closeCurrentWindow = new Prof_classes();
-      //   closeCurrentWindow.setVisible(true);//Open the new window 
+     
       System.out.println(getUsername);        
       JFrame frame = new JFrame();
                 frame.setContentPane(new Teacher_test(getUsername)); //to initialize the components
-               // Teacher_test b = new Teacher_test(getUsername); //pass in the string into the constructor
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
                 frame.setVisible(true);

@@ -13,7 +13,7 @@ import javax.persistence.RollbackException;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JButton;
-import javax.swing.JOptionPane;
+
 /**
  *
  * @author jean
@@ -47,7 +47,7 @@ public class Teacher_test extends JPanel {
    
     public  void inputQuery(String where){ 
        where = "'" + where + "'"; //add quatation for column name
-    String queryString = "SELECT * FROM teacher_schedule WHERE Facutly_id = " + where + ";";
+    String queryString = "SELECT * FROM teacher_schedule WHERE Faculty_id = " + where + ";";
     Thequery = queryString;
     initComponents(Thequery); //needs to have a string parameter
     
@@ -73,7 +73,7 @@ public class Teacher_test extends JPanel {
         org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${courses}"));
         columnBinding.setColumnName("Courses");
         columnBinding.setColumnClass(String.class);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${facutlyid}"));
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${facultyid}"));
         columnBinding.setColumnName("Facultyid");
         columnBinding.setColumnClass(String.class);
         bindingGroup.addBinding(jTableBinding);

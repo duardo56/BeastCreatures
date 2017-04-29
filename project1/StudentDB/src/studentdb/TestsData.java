@@ -5,8 +5,6 @@
  */
 package studentdb;
 
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -15,14 +13,15 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.persistence.Transient;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author Boss
  */
 @Entity
-@Table(name = "tests_data", catalog = "student_database", schema = "")
+@Table(name = "tests_data")
+@XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "TestsData.findAll", query = "SELECT t FROM TestsData t"),
     @NamedQuery(name = "TestsData.findByTdSn", query = "SELECT t FROM TestsData t WHERE t.tdSn = :tdSn"),
@@ -34,9 +33,6 @@ import javax.persistence.Transient;
     @NamedQuery(name = "TestsData.findByAverage", query = "SELECT t FROM TestsData t WHERE t.average = :average"),
     @NamedQuery(name = "TestsData.findByFinalGrade", query = "SELECT t FROM TestsData t WHERE t.finalGrade = :finalGrade")})
 public class TestsData implements Serializable {
-
-    @Transient
-    private PropertyChangeSupport changeSupport = new PropertyChangeSupport(this);
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -79,9 +75,7 @@ public class TestsData implements Serializable {
     }
 
     public void setTdSn(Integer tdSn) {
-        Integer oldTdSn = this.tdSn;
         this.tdSn = tdSn;
-        changeSupport.firePropertyChange("tdSn", oldTdSn, tdSn);
     }
 
     public String getStudentId() {
@@ -89,9 +83,7 @@ public class TestsData implements Serializable {
     }
 
     public void setStudentId(String studentId) {
-        String oldStudentId = this.studentId;
         this.studentId = studentId;
-        changeSupport.firePropertyChange("studentId", oldStudentId, studentId);
     }
 
     public String getCourseId() {
@@ -99,9 +91,7 @@ public class TestsData implements Serializable {
     }
 
     public void setCourseId(String courseId) {
-        String oldCourseId = this.courseId;
         this.courseId = courseId;
-        changeSupport.firePropertyChange("courseId", oldCourseId, courseId);
     }
 
     public Double getTest1() {
@@ -109,9 +99,7 @@ public class TestsData implements Serializable {
     }
 
     public void setTest1(Double test1) {
-        Double oldTest1 = this.test1;
         this.test1 = test1;
-        changeSupport.firePropertyChange("test1", oldTest1, test1);
     }
 
     public Double getTest2() {
@@ -119,9 +107,7 @@ public class TestsData implements Serializable {
     }
 
     public void setTest2(Double test2) {
-        Double oldTest2 = this.test2;
         this.test2 = test2;
-        changeSupport.firePropertyChange("test2", oldTest2, test2);
     }
 
     public Double getTest3() {
@@ -129,9 +115,7 @@ public class TestsData implements Serializable {
     }
 
     public void setTest3(Double test3) {
-        Double oldTest3 = this.test3;
         this.test3 = test3;
-        changeSupport.firePropertyChange("test3", oldTest3, test3);
     }
 
     public Double getAverage() {
@@ -139,9 +123,7 @@ public class TestsData implements Serializable {
     }
 
     public void setAverage(Double average) {
-        Double oldAverage = this.average;
         this.average = average;
-        changeSupport.firePropertyChange("average", oldAverage, average);
     }
 
     public Double getFinalGrade() {
@@ -149,9 +131,7 @@ public class TestsData implements Serializable {
     }
 
     public void setFinalGrade(Double finalGrade) {
-        Double oldFinalGrade = this.finalGrade;
         this.finalGrade = finalGrade;
-        changeSupport.firePropertyChange("finalGrade", oldFinalGrade, finalGrade);
     }
 
     @Override
@@ -177,14 +157,6 @@ public class TestsData implements Serializable {
     @Override
     public String toString() {
         return "studentdb.TestsData[ tdSn=" + tdSn + " ]";
-    }
-
-    public void addPropertyChangeListener(PropertyChangeListener listener) {
-        changeSupport.addPropertyChangeListener(listener);
-    }
-
-    public void removePropertyChangeListener(PropertyChangeListener listener) {
-        changeSupport.removePropertyChangeListener(listener);
     }
     
 }

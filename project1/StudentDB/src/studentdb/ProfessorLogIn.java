@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package studentdb;
+import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -100,6 +101,11 @@ public static String Profusername()
         profPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 profPasswordActionPerformed(evt);
+            }
+        });
+        profPassword.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                profPasswordKeyPressed(evt);
             }
         });
 
@@ -283,6 +289,41 @@ public static String pls;
         ProfessorLogIn closeCurrentWindow = new ProfessorLogIn();
         closeCurrentWindow.setVisible(true);//Open the new window        // TODO add your handling code here:
     }//GEN-LAST:event_Teacher_buttonActionPerformed
+
+    private void profPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_profPasswordKeyPressed
+ if(evt.getKeyCode()==KeyEvent.VK_ENTER)
+        {
+           
+    //saving email inputed to string 
+        String getUsername = profUsername.getText();
+       // System.out.println(getUsername);
+        pls = getUsername;
+        
+   //char array stores password that was inputed
+        char[] a = profPassword.getPassword();
+
+  //converts char into string 
+         String getPassword = new String(a);
+         
+         if(validate(getUsername, getPassword))
+         {      
+         dispose();//To close the current window
+     
+      System.out.println(getUsername);        
+      JFrame frame = new JFrame();
+                frame.setContentPane(new Teacher_test(getUsername)); //to initialize the components
+                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
+ 
+         }
+         else 
+         {
+        //If incorrect email or password POPUP BOX
+        ProfessorLogIn.infoBox("You Entered a incorrect Email or Password", "ERROR");
+         } 
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_profPasswordKeyPressed
 
     /**
      * @param args the command line arguments

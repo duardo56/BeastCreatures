@@ -5,58 +5,109 @@
  */
 package studentdb;
 
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
-import javax.persistence.EmbeddedId;
+import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.persistence.Transient;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author euclidesafonso
+ * @author Boss
  */
 @Entity
-@Table(name = "student_schedule", catalog = "student_database", schema = "")
+@Table(name = "student_schedule")
+@XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "StudentSchedule.findAll", query = "SELECT s FROM StudentSchedule s"),
-    @NamedQuery(name = "StudentSchedule.findByStudentId", query = "SELECT s FROM StudentSchedule s WHERE s.studentSchedulePK.studentId = :studentId"),
-    @NamedQuery(name = "StudentSchedule.findByCourses", query = "SELECT s FROM StudentSchedule s WHERE s.studentSchedulePK.courses = :courses")})
+    @NamedQuery(name = "StudentSchedule.findBySsSn", query = "SELECT s FROM StudentSchedule s WHERE s.ssSn = :ssSn"),
+    @NamedQuery(name = "StudentSchedule.findByStudentId", query = "SELECT s FROM StudentSchedule s WHERE s.studentId = :studentId"),
+    @NamedQuery(name = "StudentSchedule.findByFacultyid", query = "SELECT s FROM StudentSchedule s WHERE s.facultyid = :facultyid"),
+    @NamedQuery(name = "StudentSchedule.findByCourseId", query = "SELECT s FROM StudentSchedule s WHERE s.courseId = :courseId"),
+    @NamedQuery(name = "StudentSchedule.findByCourseName", query = "SELECT s FROM StudentSchedule s WHERE s.courseName = :courseName")})
 public class StudentSchedule implements Serializable {
 
-    @Transient
-    private PropertyChangeSupport changeSupport = new PropertyChangeSupport(this);
-
     private static final long serialVersionUID = 1L;
-    @EmbeddedId
-    protected StudentSchedulePK studentSchedulePK;
+    @Id
+    @Basic(optional = false)
+    @Column(name = "ss_sn")
+    private Integer ssSn;
+    @Basic(optional = false)
+    @Column(name = "student_id")
+    private String studentId;
+    @Basic(optional = false)
+    @Column(name = "Faculty_id")
+    private String facultyid;
+    @Basic(optional = false)
+    @Column(name = "course_id")
+    private String courseId;
+    @Basic(optional = false)
+    @Column(name = "course_name")
+    private String courseName;
 
     public StudentSchedule() {
     }
 
-    public StudentSchedule(StudentSchedulePK studentSchedulePK) {
-        this.studentSchedulePK = studentSchedulePK;
+    public StudentSchedule(Integer ssSn) {
+        this.ssSn = ssSn;
     }
 
-    public StudentSchedule(String studentId, String courses) {
-        this.studentSchedulePK = new StudentSchedulePK(studentId, courses);
+    public StudentSchedule(Integer ssSn, String studentId, String facultyid, String courseId, String courseName) {
+        this.ssSn = ssSn;
+        this.studentId = studentId;
+        this.facultyid = facultyid;
+        this.courseId = courseId;
+        this.courseName = courseName;
     }
 
-    public StudentSchedulePK getStudentSchedulePK() {
-        return studentSchedulePK;
+    public Integer getSsSn() {
+        return ssSn;
     }
 
-    public void setStudentSchedulePK(StudentSchedulePK studentSchedulePK) {
-        this.studentSchedulePK = studentSchedulePK;
+    public void setSsSn(Integer ssSn) {
+        this.ssSn = ssSn;
+    }
+
+    public String getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
+    }
+
+    public String getFacultyid() {
+        return facultyid;
+    }
+
+    public void setFacultyid(String facultyid) {
+        this.facultyid = facultyid;
+    }
+
+    public String getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (studentSchedulePK != null ? studentSchedulePK.hashCode() : 0);
+        hash += (ssSn != null ? ssSn.hashCode() : 0);
         return hash;
     }
 
@@ -67,7 +118,7 @@ public class StudentSchedule implements Serializable {
             return false;
         }
         StudentSchedule other = (StudentSchedule) object;
-        if ((this.studentSchedulePK == null && other.studentSchedulePK != null) || (this.studentSchedulePK != null && !this.studentSchedulePK.equals(other.studentSchedulePK))) {
+        if ((this.ssSn == null && other.ssSn != null) || (this.ssSn != null && !this.ssSn.equals(other.ssSn))) {
             return false;
         }
         return true;
@@ -75,15 +126,7 @@ public class StudentSchedule implements Serializable {
 
     @Override
     public String toString() {
-        return "studentdb.StudentSchedule[ studentSchedulePK=" + studentSchedulePK + " ]";
-    }
-
-    public void addPropertyChangeListener(PropertyChangeListener listener) {
-        changeSupport.addPropertyChangeListener(listener);
-    }
-
-    public void removePropertyChangeListener(PropertyChangeListener listener) {
-        changeSupport.removePropertyChangeListener(listener);
+        return "studentdb.StudentSchedule[ ssSn=" + ssSn + " ]";
     }
     
 }

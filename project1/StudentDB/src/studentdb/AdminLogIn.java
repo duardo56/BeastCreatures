@@ -5,6 +5,7 @@
  */
 package studentdb;
 
+import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -65,6 +66,12 @@ public class AdminLogIn extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Password:");
+
+        adminPassword.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                adminPasswordKeyPressed(evt);
+            }
+        });
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImgResource/Test.png"))); // NOI18N
 
@@ -178,6 +185,37 @@ System.exit(0);
         AdminLogIn.infoBox("You Entered a incorrect Email or Password", "ERROR");
          }
     }//GEN-LAST:event_OKbuttonActionPerformed
+
+    private void adminPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_adminPasswordKeyPressed
+        // TODO add your handling code here:
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER)
+        {
+                
+    //saving email inputed to string 
+        String getUsername = adminUsername.getText();
+       // System.out.println(getUsername);
+        
+   //char array stores password that was inputed
+        char[] a = adminPassword.getPassword();
+
+  //converts char into string 
+         String getPassword = new String(a);
+         
+         if(validate(getUsername, getPassword))
+         {      
+         dispose();//To close the current window
+         
+  AdminView closeCurrentWindow = new AdminView();
+ closeCurrentWindow.setVisible(true);//Open the new window
+ 
+         }
+         else 
+         {
+        //If incorrect email or password POPUP BOX
+        AdminLogIn.infoBox("You Entered a incorrect Email or Password", "ERROR");
+         }
+        }
+    }//GEN-LAST:event_adminPasswordKeyPressed
 
     /**
      * @param args the command line arguments

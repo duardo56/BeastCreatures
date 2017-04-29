@@ -19,16 +19,20 @@ import javax.persistence.Transient;
 
 /**
  *
- * @author euclidesafonso
+ * @author Boss
  */
 @Entity
 @Table(name = "tests_data", catalog = "student_database", schema = "")
 @NamedQueries({
     @NamedQuery(name = "TestsData.findAll", query = "SELECT t FROM TestsData t"),
+    @NamedQuery(name = "TestsData.findByTdSn", query = "SELECT t FROM TestsData t WHERE t.tdSn = :tdSn"),
+    @NamedQuery(name = "TestsData.findByStudentId", query = "SELECT t FROM TestsData t WHERE t.studentId = :studentId"),
     @NamedQuery(name = "TestsData.findByCourseId", query = "SELECT t FROM TestsData t WHERE t.courseId = :courseId"),
     @NamedQuery(name = "TestsData.findByTest1", query = "SELECT t FROM TestsData t WHERE t.test1 = :test1"),
     @NamedQuery(name = "TestsData.findByTest2", query = "SELECT t FROM TestsData t WHERE t.test2 = :test2"),
-    @NamedQuery(name = "TestsData.findByTest3", query = "SELECT t FROM TestsData t WHERE t.test3 = :test3")})
+    @NamedQuery(name = "TestsData.findByTest3", query = "SELECT t FROM TestsData t WHERE t.test3 = :test3"),
+    @NamedQuery(name = "TestsData.findByAverage", query = "SELECT t FROM TestsData t WHERE t.average = :average"),
+    @NamedQuery(name = "TestsData.findByFinalGrade", query = "SELECT t FROM TestsData t WHERE t.finalGrade = :finalGrade")})
 public class TestsData implements Serializable {
 
     @Transient
@@ -37,30 +41,57 @@ public class TestsData implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
+    @Column(name = "td_sn")
+    private Integer tdSn;
+    @Basic(optional = false)
+    @Column(name = "student_id")
+    private String studentId;
+    @Basic(optional = false)
     @Column(name = "course_id")
     private String courseId;
-    @Basic(optional = false)
+    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Column(name = "Test_1")
-    private double test1;
-    @Basic(optional = false)
+    private Double test1;
     @Column(name = "Test_2")
-    private double test2;
-    @Basic(optional = false)
+    private Double test2;
     @Column(name = "Test_3")
-    private double test3;
+    private Double test3;
+    @Column(name = "Average")
+    private Double average;
+    @Column(name = "final_grade")
+    private Double finalGrade;
 
     public TestsData() {
     }
 
-    public TestsData(String courseId) {
+    public TestsData(Integer tdSn) {
+        this.tdSn = tdSn;
+    }
+
+    public TestsData(Integer tdSn, String studentId, String courseId) {
+        this.tdSn = tdSn;
+        this.studentId = studentId;
         this.courseId = courseId;
     }
 
-    public TestsData(String courseId, double test1, double test2, double test3) {
-        this.courseId = courseId;
-        this.test1 = test1;
-        this.test2 = test2;
-        this.test3 = test3;
+    public Integer getTdSn() {
+        return tdSn;
+    }
+
+    public void setTdSn(Integer tdSn) {
+        Integer oldTdSn = this.tdSn;
+        this.tdSn = tdSn;
+        changeSupport.firePropertyChange("tdSn", oldTdSn, tdSn);
+    }
+
+    public String getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(String studentId) {
+        String oldStudentId = this.studentId;
+        this.studentId = studentId;
+        changeSupport.firePropertyChange("studentId", oldStudentId, studentId);
     }
 
     public String getCourseId() {
@@ -73,40 +104,60 @@ public class TestsData implements Serializable {
         changeSupport.firePropertyChange("courseId", oldCourseId, courseId);
     }
 
-    public double getTest1() {
+    public Double getTest1() {
         return test1;
     }
 
-    public void setTest1(double test1) {
-        double oldTest1 = this.test1;
+    public void setTest1(Double test1) {
+        Double oldTest1 = this.test1;
         this.test1 = test1;
         changeSupport.firePropertyChange("test1", oldTest1, test1);
     }
 
-    public double getTest2() {
+    public Double getTest2() {
         return test2;
     }
 
-    public void setTest2(double test2) {
-        double oldTest2 = this.test2;
+    public void setTest2(Double test2) {
+        Double oldTest2 = this.test2;
         this.test2 = test2;
         changeSupport.firePropertyChange("test2", oldTest2, test2);
     }
 
-    public double getTest3() {
+    public Double getTest3() {
         return test3;
     }
 
-    public void setTest3(double test3) {
-        double oldTest3 = this.test3;
+    public void setTest3(Double test3) {
+        Double oldTest3 = this.test3;
         this.test3 = test3;
         changeSupport.firePropertyChange("test3", oldTest3, test3);
+    }
+
+    public Double getAverage() {
+        return average;
+    }
+
+    public void setAverage(Double average) {
+        Double oldAverage = this.average;
+        this.average = average;
+        changeSupport.firePropertyChange("average", oldAverage, average);
+    }
+
+    public Double getFinalGrade() {
+        return finalGrade;
+    }
+
+    public void setFinalGrade(Double finalGrade) {
+        Double oldFinalGrade = this.finalGrade;
+        this.finalGrade = finalGrade;
+        changeSupport.firePropertyChange("finalGrade", oldFinalGrade, finalGrade);
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (courseId != null ? courseId.hashCode() : 0);
+        hash += (tdSn != null ? tdSn.hashCode() : 0);
         return hash;
     }
 
@@ -117,7 +168,7 @@ public class TestsData implements Serializable {
             return false;
         }
         TestsData other = (TestsData) object;
-        if ((this.courseId == null && other.courseId != null) || (this.courseId != null && !this.courseId.equals(other.courseId))) {
+        if ((this.tdSn == null && other.tdSn != null) || (this.tdSn != null && !this.tdSn.equals(other.tdSn))) {
             return false;
         }
         return true;
@@ -125,7 +176,7 @@ public class TestsData implements Serializable {
 
     @Override
     public String toString() {
-        return "studentdb.TestsData[ courseId=" + courseId + " ]";
+        return "studentdb.TestsData[ tdSn=" + tdSn + " ]";
     }
 
     public void addPropertyChangeListener(PropertyChangeListener listener) {

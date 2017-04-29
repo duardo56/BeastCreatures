@@ -250,6 +250,7 @@ public class Tests_Data extends JPanel {
 
     private void LogoutButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
         // TODO add your handling code here:
+       System.exit(0); //exit entire program
     }                                            
 
 
@@ -301,9 +302,10 @@ public class Tests_Data extends JPanel {
         /* Create and display the form */
         EventQueue.invokeLater(new Runnable() {
             public void run() {
+                
                 JFrame frame = new JFrame();
                 frame.setContentPane(new Tests_Data(bs));
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.pack();
                 frame.setVisible(true);
             }

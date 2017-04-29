@@ -7,9 +7,7 @@ package studentdb;
 
 import java.awt.EventQueue;
 import java.beans.Beans;
-import java.util.ArrayList;
-import java.util.List;
-import javax.persistence.RollbackException;
+import java.lang.reflect.InvocationTargetException;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -80,7 +78,7 @@ public class Teacher_test extends JPanel {
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ, masterTable, org.jdesktop.beansbinding.ELProperty.create("${selectedElement != null}"), courseIdField, org.jdesktop.beansbinding.BeanProperty.create("enabled"));
         bindingGroup.addBinding(binding);
 
-        logoutButton.setText("Logout");
+        logoutButton.setText("Quit");
         logoutButton.addActionListener(formListener);
 
         GoButton.setText("Go");
@@ -147,6 +145,7 @@ public class Teacher_test extends JPanel {
         }
     }// </editor-fold>                        
 
+
     
     private void GoButtonActionPerformed(java.awt.event.ActionEvent evt) {                                         
        String course =  courseIdField.getText(); //retrieve the course id
@@ -157,13 +156,14 @@ public class Teacher_test extends JPanel {
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.pack();
                 frame.setVisible(true);
- 
+
        
        
     }                                        
     
-    private void logoutButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
-         
+    public void logoutButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
+     System.out.println(  Thread.currentThread());
+     System.exit(0);
     }                                            
 
 
@@ -178,8 +178,9 @@ public class Teacher_test extends JPanel {
     private javax.swing.JTable masterTable;
     private javax.persistence.Query query;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
-    // End of variables declaration                   
-    public static void main(String[] args) {
+    // End of variables declaration            
+    
+    public static void main(String[] args) throws InterruptedException, InvocationTargetException {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -205,15 +206,17 @@ public class Teacher_test extends JPanel {
 
         String bs = "pass this in";
         /* Create and display the form */
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                JFrame frame = new JFrame();
-                frame.setContentPane(new Teacher_test(bs));
-                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                frame.pack();
-                frame.setVisible(true);
+        EventQueue.invokeAndWait(new Runnable() {
+            public  void run() {
+                JFrame frame1 = new JFrame();
+                frame1.setContentPane(new Teacher_test(bs));
+                frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                frame1.pack();
+                frame1.setVisible(true);
+                
             }
         });
+        
     }
     
 }
